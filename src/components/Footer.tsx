@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, Linkedin, MapPin, Instagram, Facebook, Youtube, MessageCircle } from "lucide-react";
-import logoImg from "@/assets/logo-dunn-company.png";
+
 
 const Footer = () => {
   return (
