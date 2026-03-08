@@ -34,18 +34,24 @@ const whatWeDo = [
     image: homeGraphicDesign,
     title: "Graphic Design",
     desc: "Logos, brand identity, business cards, marketing materials.",
+    details: "Our graphic design services focus on creating cohesive, striking visuals that communicate your core values and make your brand unforgettable.",
+    deliverables: ["Logo Design & Brand Identity", "Business Cards & Stationery", "Marketing Collateral", "Packaging Design", "Brand Guidelines"]
   },
   {
     Icon: ProductionDesignIcon,
     image: homeProductionDesign,
     title: "Production Design",
     desc: "Pitch decks, sell sheets, presentations, printed assets.",
+    details: "We transform ideas into polished, professional assets. From high-stakes investor pitch decks to detailed sell sheets, our production design ensures your materials make a lasting impact.",
+    deliverables: ["Custom Pitch Decks", "Sales Presentations", "Sell Sheets & Brochures", "Annual Reports", "Event Signage & Displays"]
   },
   {
     Icon: StrategyIcon,
     image: homeStrategy,
-    title: "Marketing & Creative Strategy",
-    desc: "Campaign concepts, brand positioning, digital marketing.",
+    title: "Marketing, Strategy & AI",
+    desc: "Campaign concepts, brand positioning, AI marketing systems.",
+    details: "We blend traditional marketing strategy with cutting-edge AI technology to position your brand for explosive growth, combining data-driven insights with creative execution.",
+    deliverables: ["Brand Positioning & Strategy", "Campaign Conceptualization", "Digital Marketing Strategy", "AI Workflow Integration", "Content Strategy & Planning"]
   },
 ];
 
