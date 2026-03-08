@@ -72,6 +72,8 @@ const processSteps = [
 ];
 
 const Index = () => {
+  const [selectedService, setSelectedService] = useState<typeof whatWeDo[0] | null>(null);
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
