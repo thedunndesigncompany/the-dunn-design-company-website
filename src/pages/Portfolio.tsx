@@ -6,42 +6,41 @@ import AnimatedSection from "@/components/AnimatedSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PortfolioGrid from "@/components/PortfolioGrid";
+import stockBrandStrategy from "@/assets/stock-brand-strategy.jpg";
+import stockGraphicDesign from "@/assets/stock-graphic-design.jpg";
+import stockContentCreation from "@/assets/stock-content-creation.jpg";
+import stockDigitalNetwork from "@/assets/stock-digital-network.jpg";
+import stockPrinting from "@/assets/stock-printing.jpg";
+import stockSocialMedia from "@/assets/stock-social-media.jpg";
+import stockAdsPlatform from "@/assets/stock-ads-platform.jpg";
+import stockMobileApps from "@/assets/stock-mobile-apps.jpg";
+import stockDigitalApps from "@/assets/stock-digital-apps.jpg";
 import stockDesignConcept from "@/assets/stock-design-concept.jpg";
-import stockColorSwatches from "@/assets/stock-color-swatches.jpg";
-import stockCreativeWorkspace from "@/assets/stock-creative-workspace.jpg";
-import stockDigitalMarketing from "@/assets/stock-digital-marketing.jpg";
-import stockPrintProduction from "@/assets/stock-print-production.jpg";
-import stockDesignStudio from "@/assets/stock-design-studio.jpg";
-import stockSocialAnalytics from "@/assets/stock-social-analytics.jpg";
-import stockAdsDashboard from "@/assets/stock-ads-dashboard.jpg";
 import stockColorExplosion from "@/assets/stock-color-explosion.jpg";
-import stockMarketingIcons from "@/assets/stock-marketing-icons.jpg";
-
-/* ── Data ── */
 
 const graphicDesign = [
-  { image: stockDesignConcept, title: "Tech Startup Brand Identity", type: "Logo & Brand System" },
-  { image: stockCreativeWorkspace, title: "Professional Services Rebrand", type: "Visual Identity" },
-  { image: stockColorSwatches, title: "Nonprofit Visual Identity", type: "Brand Guidelines" },
-  { image: stockDesignStudio, title: "Product Line Brand Package", type: "Business Cards & Collateral" },
+  { image: stockBrandStrategy, title: "Tech Startup Brand Identity", type: "Logo & Brand System" },
+  { image: stockGraphicDesign, title: "Professional Services Rebrand", type: "Visual Identity" },
+  { image: stockDesignConcept, title: "Nonprofit Visual Identity", type: "Brand Guidelines" },
+  { image: stockColorExplosion, title: "Product Line Brand Package", type: "Business Cards & Collateral" },
 ];
 
 const productionDesign = [
-  { image: stockPrintProduction, title: "Healthcare Outreach Materials", type: "Pitch Deck & Brochures" },
-  { image: stockColorExplosion, title: "Retail Campaign Sell Sheets", type: "Sell Sheets & Presentations" },
-  { image: stockDesignConcept, title: "Conference Speaker Kit", type: "Presentation Design" },
+  { image: stockPrinting, title: "Healthcare Outreach Materials", type: "Pitch Deck & Brochures" },
+  { image: stockContentCreation, title: "Retail Campaign Sell Sheets", type: "Sell Sheets & Presentations" },
+  { image: stockAdsPlatform, title: "Conference Speaker Kit", type: "Presentation Design" },
 ];
 
 const marketingContent = [
-  { image: stockSocialAnalytics, title: "Retail Social Media Campaign", type: "Social Media Graphics" },
-  { image: stockAdsDashboard, title: "Nonprofit Fundraising Campaign", type: "Email Marketing Visuals" },
-  { image: stockDigitalMarketing, title: "Product Launch Digital Ads", type: "Campaign Assets" },
-  { image: stockMarketingIcons, title: "Digital Marketing Suite", type: "Marketing Icons & Graphics" },
+  { image: stockSocialMedia, title: "Retail Social Media Campaign", type: "Social Media Graphics" },
+  { image: stockDigitalNetwork, title: "Nonprofit Fundraising Campaign", type: "Email Marketing Visuals" },
+  { image: stockMobileApps, title: "Product Launch Digital Ads", type: "Campaign Assets" },
+  { image: stockDigitalApps, title: "Digital Marketing Suite", type: "Marketing Icons & Graphics" },
 ];
 
 const caseStudies = [
   {
-    image: stockDesignConcept,
+    image: stockBrandStrategy,
     title: "Strategic Brand Launch Campaign",
     client: "Technology Startup",
     overview: "Developed a comprehensive go-to-market strategy for a technology startup entering a competitive market.",
@@ -50,7 +49,7 @@ const caseStudies = [
     results: "Successfully launched the brand with strong initial engagement and measurable audience growth within the first quarter.",
   },
   {
-    image: stockCreativeWorkspace,
+    image: stockGraphicDesign,
     title: "Corporate Identity Redesign",
     client: "Professional Services Firm",
     overview: "Complete visual identity overhaul for an established professional services firm seeking a modern refresh.",
@@ -59,7 +58,7 @@ const caseStudies = [
     results: "Delivered a cohesive brand identity that strengthened market positioning and improved client perception.",
   },
   {
-    image: stockSocialAnalytics,
+    image: stockSocialMedia,
     title: "Social Media Engagement Campaign",
     client: "Retail Brand",
     overview: "Multi-platform social media strategy and content creation for a growing retail brand.",
@@ -69,8 +68,6 @@ const caseStudies = [
   },
 ];
 
-/* ── Main Page ── */
-
 const Portfolio = () => {
   const [expandedStudy, setExpandedStudy] = useState<number | null>(null);
 
@@ -78,7 +75,6 @@ const Portfolio = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero */}
       <section className="pt-32 pb-16 section-padding bg-primary relative overflow-hidden">
         <div className="absolute inset-0">
           <img src={stockColorExplosion} alt="" className="w-full h-full object-cover opacity-10" />
@@ -99,7 +95,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* ── Graphic Design ── */}
       <section className="section-padding bg-card">
         <div className="container-narrow">
           <AnimatedSection>
@@ -113,7 +108,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* ── Production Design ── */}
       <section className="section-padding bg-background">
         <div className="container-narrow">
           <AnimatedSection>
@@ -127,7 +121,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* ── Marketing & Digital Content ── */}
       <section className="section-padding bg-card">
         <div className="container-narrow">
           <AnimatedSection>
@@ -141,7 +134,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* ── Case Studies ── */}
       <section className="section-padding bg-sand">
         <div className="container-narrow">
           <AnimatedSection>
@@ -213,7 +205,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="section-padding bg-primary">
         <div className="container-narrow text-center">
           <AnimatedSection>

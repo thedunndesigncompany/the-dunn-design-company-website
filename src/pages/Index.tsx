@@ -4,44 +4,45 @@ import { ArrowRight, Palette, Presentation, Target, MessageSquare, Lightbulb, Ro
 import AnimatedSection from "@/components/AnimatedSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import stockDesignConcept from "@/assets/stock-design-concept.jpg";
-import stockColorSwatches from "@/assets/stock-color-swatches.jpg";
-import stockCreativeWorkspace from "@/assets/stock-creative-workspace.jpg";
-import stockDigitalMarketing from "@/assets/stock-digital-marketing.jpg";
-import stockPrintProduction from "@/assets/stock-print-production.jpg";
-import stockDesignStudio from "@/assets/stock-design-studio.jpg";
-import stockSocialAnalytics from "@/assets/stock-social-analytics.jpg";
-import stockAdsDashboard from "@/assets/stock-ads-dashboard.jpg";
-import aboutPortrait from "@/assets/about-portrait.jpg";
+import stockGraphicDesign from "@/assets/stock-graphic-design.jpg";
+import stockBrandStrategy from "@/assets/stock-brand-strategy.jpg";
+import stockContentCreation from "@/assets/stock-content-creation.jpg";
+import stockDigitalApps from "@/assets/stock-digital-apps.jpg";
+import stockDigitalNetwork from "@/assets/stock-digital-network.jpg";
+import stockSocialMedia from "@/assets/stock-social-media.jpg";
+import stockAdsPlatform from "@/assets/stock-ads-platform.jpg";
+import stockMobileApps from "@/assets/stock-mobile-apps.jpg";
+import stockPrinting from "@/assets/stock-printing.jpg";
+import melissaDunn from "@/assets/melissa-dunn.jpg";
 
 const whatWeDo = [
   {
     icon: Palette,
-    image: stockDesignStudio,
+    image: stockGraphicDesign,
     title: "Graphic Design",
     desc: "Logos, brand identity, business cards, marketing materials.",
   },
   {
     icon: Presentation,
-    image: stockPrintProduction,
+    image: stockPrinting,
     title: "Production Design",
     desc: "Pitch decks, sell sheets, presentations, printed assets.",
   },
   {
     icon: Target,
-    image: stockAdsDashboard,
+    image: stockAdsPlatform,
     title: "Marketing & Creative Strategy",
     desc: "Campaign concepts, brand positioning, digital marketing.",
   },
 ];
 
 const featuredWork = [
-  { image: stockDesignConcept, title: "Brand Identity Systems", label: "Brand & Visual Design" },
-  { image: stockColorSwatches, title: "Print & Production Design", label: "Color Systems & Print" },
-  { image: stockSocialAnalytics, title: "Social Media Campaigns", label: "Digital Marketing" },
-  { image: stockCreativeWorkspace, title: "Creative Direction", label: "Art Direction & Strategy" },
-  { image: stockDigitalMarketing, title: "Digital Marketing Strategy", label: "Strategy & Analytics" },
-  { image: stockPrintProduction, title: "Marketing Collateral", label: "Print Production" },
+  { image: stockBrandStrategy, title: "Brand Identity Systems", label: "Brand & Visual Design" },
+  { image: stockGraphicDesign, title: "Print & Production Design", label: "Graphic Design" },
+  { image: stockSocialMedia, title: "Social Media Campaigns", label: "Digital Marketing" },
+  { image: stockDigitalNetwork, title: "Digital Strategy", label: "Strategy & Analytics" },
+  { image: stockContentCreation, title: "Content Creation", label: "Creative Direction" },
+  { image: stockMobileApps, title: "Mobile & App Design", label: "Digital Design" },
 ];
 
 const processSteps = [
@@ -58,14 +59,14 @@ const Index = () => {
 
       {/* ── Hero ── */}
       <section className="relative min-h-screen flex items-center overflow-hidden bg-primary">
-        {/* Background image with overlay */}
+        {/* Full background image */}
         <div className="absolute inset-0">
-          <img src={stockDesignStudio} alt="" className="w-full h-full object-cover opacity-20" />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/70" />
+          <img src={stockDigitalApps} alt="" className="w-full h-full object-cover opacity-30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/75 to-primary/50" />
         </div>
 
         {/* Floating accent shapes */}
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <motion.div
             className="absolute -top-20 -right-20 w-[500px] h-[500px] rounded-full border border-secondary/20"
             initial={{ opacity: 0, scale: 0.8 }}
@@ -79,16 +80,10 @@ const Index = () => {
             transition={{ duration: 1, delay: 0.4 }}
           />
           <motion.div
-            className="absolute top-[25%] right-[20%] w-16 h-16 rounded-lg bg-accent/20 rotate-45 animate-float"
+            className="absolute top-[25%] right-[20%] w-16 h-16 rounded-lg bg-accent/25 rotate-45 animate-float"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-          />
-          <motion.div
-            className="absolute top-[55%] right-[35%] w-10 h-10 rounded-full bg-secondary/15 animate-pulse-glow"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
           />
         </div>
 
@@ -128,7 +123,7 @@ const Index = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="text-primary-foreground/70 text-lg md:text-xl max-w-xl leading-relaxed mb-6"
+              className="text-primary-foreground/80 text-lg md:text-xl max-w-xl leading-relaxed mb-6"
             >
               Strategic marketing and creative design that help brands grow, engage, and stand out.
             </motion.p>
@@ -180,11 +175,11 @@ const Index = () => {
             {whatWeDo.map((item, i) => (
               <AnimatedSection key={item.title} delay={i * 0.1}>
                 <motion.div
-                  whileHover={{ y: -8, boxShadow: "0 20px 40px -12px rgba(26,26,46,0.15)" }}
+                  whileHover={{ y: -8, boxShadow: "0 20px 40px -12px rgba(0,0,0,0.15)" }}
                   className="bg-background rounded-2xl overflow-hidden border border-border hover:border-secondary/30 transition-all duration-300 h-full"
                 >
                   <div className="aspect-[16/10] overflow-hidden">
-                    <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <img src={item.image} alt={item.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
                   </div>
                   <div className="p-6 text-center">
                     <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mx-auto mb-4">
@@ -255,12 +250,15 @@ const Index = () => {
         <div className="container-narrow">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <AnimatedSection>
-              <div className="rounded-2xl overflow-hidden aspect-[4/5]">
+              <div className="rounded-2xl overflow-hidden aspect-[3/4] max-w-md mx-auto relative">
                 <img
-                  src={aboutPortrait}
+                  src={melissaDunn}
                   alt="Melissa Dunn — Founder"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
+                  style={{ objectPosition: "center 15%" }}
                 />
+                {/* Decorative accent */}
+                <div className="absolute -bottom-3 -right-3 w-full h-full border-2 border-accent rounded-2xl -z-10" />
               </div>
             </AnimatedSection>
             <AnimatedSection delay={0.15}>
@@ -321,8 +319,8 @@ const Index = () => {
       {/* ── CTA ── */}
       <section className="section-padding bg-primary relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={stockColorSwatches} alt="" className="w-full h-full object-cover opacity-10" />
-          <div className="absolute inset-0 bg-primary/90" />
+          <img src={stockDigitalNetwork} alt="" className="w-full h-full object-cover opacity-15" />
+          <div className="absolute inset-0 bg-primary/85" />
         </div>
         <div className="container-narrow text-center relative z-10">
           <AnimatedSection>

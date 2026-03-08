@@ -3,8 +3,8 @@ import { ArrowRight } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import aboutPortrait from "@/assets/about-portrait.jpg";
-import stockCreativeWorkspace from "@/assets/stock-creative-workspace.jpg";
+import melissaDunn from "@/assets/melissa-dunn.jpg";
+import stockBrandStrategy from "@/assets/stock-brand-strategy.jpg";
 
 const About = () => {
   return (
@@ -13,7 +13,7 @@ const About = () => {
 
       <section className="pt-32 pb-16 section-padding bg-primary relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={stockCreativeWorkspace} alt="" className="w-full h-full object-cover opacity-15" />
+          <img src={stockBrandStrategy} alt="" className="w-full h-full object-cover opacity-15" />
           <div className="absolute inset-0 bg-primary/85" />
         </div>
         <div className="container-narrow relative z-10">
@@ -30,14 +30,19 @@ const About = () => {
         <div className="container-narrow">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <AnimatedSection>
-              <div className="rounded-2xl overflow-hidden bg-muted aspect-[4/5]">
-                <img
-                  src={aboutPortrait}
-                  alt="Melissa Dunn — Founder of The Dunn Company"
-                  className="w-full h-full object-cover"
-                />
+              <div className="relative max-w-md mx-auto">
+                <div className="rounded-2xl overflow-hidden aspect-[3/4]">
+                  <img
+                    src={melissaDunn}
+                    alt="Melissa Dunn — Founder of The Dunn Company"
+                    className="w-full h-full object-cover object-top"
+                    style={{ objectPosition: "center 15%" }}
+                  />
+                </div>
+                {/* Decorative frame */}
+                <div className="absolute -bottom-3 -right-3 w-full h-full border-2 border-accent rounded-2xl -z-10" />
               </div>
-              <p className="text-muted-foreground text-sm text-center mt-3 italic">Melissa Dunn — Founder</p>
+              <p className="text-muted-foreground text-sm text-center mt-5 italic">Melissa Dunn — Founder</p>
             </AnimatedSection>
             <AnimatedSection delay={0.15}>
               <div>
