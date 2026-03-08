@@ -5,7 +5,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import melissaDunn from "@/assets/melissa-dunn-cropped.jpg";
-import agencyStrategyBright from "@/assets/agency-strategy-bright.jpg";
+import aboutBgPlants from "@/assets/about-bg-plants.jpg";
 
 const About = () => {
   return (
