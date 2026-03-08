@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Target, Palette, Share2, FileText, ArrowRight } from "lucide-react";
+import { Target, Palette, Share2, FileText, ArrowRight, Megaphone, PenTool } from "lucide-react";
 import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import Header from "@/components/Header";
@@ -38,6 +38,20 @@ const services = [
     desc: "Marketing materials such as brochures, presentations, digital assets, and promotional graphics that support brand communication.",
     deliverables: ["Pitch decks", "Brochures", "Flyers", "Email marketing graphics", "Promotional materials"],
   },
+  {
+    icon: Megaphone,
+    image: serviceStrategy,
+    title: "Creative Campaigns",
+    desc: "End-to-end campaign design from concept to execution, supporting brand visibility and audience engagement across digital and print.",
+    deliverables: ["Campaign concepts", "Ad creatives", "Launch materials", "Cross-channel assets"],
+  },
+  {
+    icon: PenTool,
+    image: serviceSocial,
+    title: "Social Media Design",
+    desc: "Custom social media templates and branded content designs that keep your brand consistent and engaging across every platform.",
+    deliverables: ["Platform templates", "Story designs", "Carousel graphics", "Profile branding"],
+  },
 ];
 
 const Services = () => {
@@ -55,22 +69,27 @@ const Services = () => {
             <p className="text-primary-foreground/70 text-lg mt-4 max-w-2xl">
               Strategic marketing and design solutions tailored to help your brand communicate clearly and grow confidently.
             </p>
+            <p className="text-secondary font-heading font-medium text-sm mt-3">
+              Creative Studio: The Dunn Design Company
+            </p>
           </AnimatedSection>
         </div>
       </section>
 
-      <section className="section-padding bg-background">
+      <section className="section-padding bg-card">
         <div className="container-narrow space-y-16">
           {services.map((service, i) => (
             <AnimatedSection key={service.title} delay={0.1}>
               <div className={`grid md:grid-cols-2 gap-10 items-center ${i % 2 === 1 ? "md:flex-row-reverse" : ""}`}>
                 <div className={i % 2 === 1 ? "md:order-2" : ""}>
-                  <motion.div whileHover={{ scale: 1.02 }} className="rounded-xl overflow-hidden">
+                  <motion.div whileHover={{ scale: 1.02 }} className="rounded-2xl overflow-hidden">
                     <img src={service.image} alt={service.title} className="w-full aspect-[4/3] object-cover" />
                   </motion.div>
                 </div>
                 <div className={i % 2 === 1 ? "md:order-1" : ""}>
-                  <service.icon className="text-accent mb-4" size={32} />
+                  <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-4">
+                    <service.icon className="text-secondary" size={24} />
+                  </div>
                   <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-4">{service.title}</h2>
                   <p className="text-muted-foreground leading-relaxed mb-6">{service.desc}</p>
                   <h4 className="font-heading font-semibold text-sm text-foreground mb-3">Example Deliverables</h4>
@@ -100,7 +119,7 @@ const Services = () => {
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 bg-coral text-coral-foreground px-10 py-4 rounded-lg font-heading font-semibold text-sm hover:opacity-90 transition-opacity"
+              className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-10 py-4 rounded-lg font-heading font-semibold text-sm hover:brightness-110 transition-all"
             >
               Schedule a Consultation <ArrowRight size={16} />
             </Link>

@@ -16,7 +16,7 @@ const Footer = () => {
             </p>
           </div>
           <div>
-            <h4 className="font-heading font-semibold mb-4 text-sm uppercase tracking-wider">Pages</h4>
+            <h4 className="font-heading font-semibold mb-4 text-sm uppercase tracking-wider text-accent">Pages</h4>
             <nav className="flex flex-col gap-2">
               {["Services", "Portfolio", "About", "Contact"].map((page) => (
                 <Link
@@ -30,7 +30,7 @@ const Footer = () => {
             </nav>
           </div>
           <div>
-            <h4 className="font-heading font-semibold mb-4 text-sm uppercase tracking-wider">Connect</h4>
+            <h4 className="font-heading font-semibold mb-4 text-sm uppercase tracking-wider text-accent">Connect</h4>
             <div className="space-y-2">
               <a href="mailto:melissa@dunndesignz.com" className="flex items-center gap-2 text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">
                 <Mail size={14} /> melissa@dunndesignz.com
