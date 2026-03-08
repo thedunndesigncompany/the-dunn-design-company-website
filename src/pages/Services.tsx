@@ -14,7 +14,7 @@ import {
   SocialDesignIcon,
 } from "@/components/icons/ServiceIcons";
 import serviceAISystems from "@/assets/service-ai-systems.jpg";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-bg-new.jpg";
 import serviceBrandDesign from "@/assets/service-brand-design.jpg";
 import serviceMarketingStrategy from "@/assets/service-marketing-strategy.jpg";
 import serviceDigitalContent from "@/assets/service-digital-content.jpg";
@@ -118,8 +118,8 @@ const Services = () => {
                   </motion.div>
                 </div>
                 <div className={i % 2 === 1 ? "md:order-1" : ""}>
-                  <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-4">
-                    <service.Icon className="text-secondary" size={24} />
+                  <div className="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center mb-5">
+                    <service.Icon className="text-secondary" size={36} />
                   </div>
                   <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-4">{service.title}</h2>
                   <p className="text-muted-foreground leading-relaxed mb-6">{service.desc}</p>
