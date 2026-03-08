@@ -7,7 +7,10 @@ const Footer = () => {
       <div className="container-narrow px-6 py-16">
         <div className="grid md:grid-cols-3 gap-12">
           <div>
-            <h3 className="text-lg font-heading font-bold mb-4">The Dunn Design Company</h3>
+            <h3 className="text-lg font-heading font-bold mb-1">The Dunn Company</h3>
+            <p className="text-primary-foreground/50 text-xs font-heading mb-3">
+              Creative Studio: The Dunn Design Company
+            </p>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
               Design That Connects. Marketing That Converts.
             </p>
@@ -45,7 +48,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-12 pt-8 border-t border-primary-foreground/10 text-center text-xs text-primary-foreground/40">
-          © {new Date().getFullYear()} The Dunn Design Company. All rights reserved.
+          © {new Date().getFullYear()} The Dunn Company. All rights reserved.
         </div>
       </div>
     </footer>

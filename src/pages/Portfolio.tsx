@@ -95,14 +95,13 @@ const Portfolio = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero */}
       <section className="pt-32 pb-16 section-padding bg-primary">
         <div className="container-narrow">
           <AnimatedSection>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-primary-foreground max-w-4xl">
               Portfolio — Melissa Dunn
             </h1>
-            <p className="text-secondary font-heading font-medium text-lg mt-2">
+            <p className="text-sky font-heading font-medium text-lg mt-2">
               Marketing Strategist | Graphic Designer | Social Media Specialist
             </p>
             <p className="text-primary-foreground/70 text-lg mt-4 max-w-2xl">
@@ -112,7 +111,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Categories */}
       <section className="py-8 px-6 bg-background border-b border-border sticky top-16 md:top-20 z-40 backdrop-blur-md bg-background/90">
         <div className="container-narrow flex gap-3 overflow-x-auto pb-2">
           {categories.map((cat) => (
@@ -131,7 +129,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Grid */}
       <section className="section-padding bg-background">
         <div className="container-narrow">
           <div className="grid sm:grid-cols-2 gap-8">
@@ -210,7 +207,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="section-padding bg-primary">
         <div className="container-narrow text-center">
           <AnimatedSection>
