@@ -4,45 +4,46 @@ import { ArrowRight, Palette, Presentation, Target, MessageSquare, Lightbulb, Ro
 import AnimatedSection from "@/components/AnimatedSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import stockGraphicDesign from "@/assets/stock-graphic-design.jpg";
-import stockBrandStrategy from "@/assets/stock-brand-strategy.jpg";
-import stockContentCreation from "@/assets/stock-content-creation.jpg";
-import stockDigitalApps from "@/assets/stock-digital-apps.jpg";
-import stockDigitalNetwork from "@/assets/stock-digital-network.jpg";
-import stockSocialMedia from "@/assets/stock-social-media.jpg";
-import stockAdsPlatform from "@/assets/stock-ads-platform.jpg";
-import stockMobileApps from "@/assets/stock-mobile-apps.jpg";
-import stockPrinting from "@/assets/stock-printing.jpg";
-import melissaDunn from "@/assets/melissa-dunn.jpg";
+import agencyBrandDesign from "@/assets/agency-brand-design.jpg";
+import agencyPrintCollateral from "@/assets/agency-print-collateral.jpg";
+import agencyStrategyRoom from "@/assets/agency-strategy-room.jpg";
+import agencyDigitalWorkspace from "@/assets/agency-digital-workspace.jpg";
+import agencyBrandIdentity from "@/assets/agency-brand-identity.jpg";
+import agencySocialContent from "@/assets/agency-social-content.jpg";
+import agencyCampaignPlanning from "@/assets/agency-campaign-planning.jpg";
+import agencyProductionStudio from "@/assets/agency-production-studio.jpg";
+import agencyDigitalAnalytics from "@/assets/agency-digital-analytics.jpg";
+import agencyEmailMarketing from "@/assets/agency-email-marketing.jpg";
+import melissaDunn from "@/assets/melissa-dunn-cropped.jpg";
 
 const whatWeDo = [
   {
     icon: Palette,
-    image: stockGraphicDesign,
+    image: agencyBrandDesign,
     title: "Graphic Design",
     desc: "Logos, brand identity, business cards, marketing materials.",
   },
   {
     icon: Presentation,
-    image: stockPrinting,
+    image: agencyPrintCollateral,
     title: "Production Design",
     desc: "Pitch decks, sell sheets, presentations, printed assets.",
   },
   {
     icon: Target,
-    image: stockAdsPlatform,
+    image: agencyStrategyRoom,
     title: "Marketing & Creative Strategy",
     desc: "Campaign concepts, brand positioning, digital marketing.",
   },
 ];
 
 const featuredWork = [
-  { image: stockBrandStrategy, title: "Brand Identity Systems", label: "Brand & Visual Design" },
-  { image: stockGraphicDesign, title: "Print & Production Design", label: "Graphic Design" },
-  { image: stockSocialMedia, title: "Social Media Campaigns", label: "Digital Marketing" },
-  { image: stockDigitalNetwork, title: "Digital Strategy", label: "Strategy & Analytics" },
-  { image: stockContentCreation, title: "Content Creation", label: "Creative Direction" },
-  { image: stockMobileApps, title: "Mobile & App Design", label: "Digital Design" },
+  { image: agencyBrandIdentity, title: "Brand Identity Systems", label: "Brand & Visual Design" },
+  { image: agencyProductionStudio, title: "Print & Production Design", label: "Graphic Design" },
+  { image: agencySocialContent, title: "Social Media Campaigns", label: "Digital Marketing" },
+  { image: agencyDigitalAnalytics, title: "Digital Strategy", label: "Strategy & Analytics" },
+  { image: agencyCampaignPlanning, title: "Creative Campaigns", label: "Creative Direction" },
+  { image: agencyEmailMarketing, title: "Email & Digital Content", label: "Digital Design" },
 ];
 
 const processSteps = [
@@ -59,16 +60,14 @@ const Index = () => {
 
       {/* ── Hero ── */}
       <section className="relative min-h-screen flex items-center overflow-hidden bg-primary">
-        {/* Full background image */}
         <div className="absolute inset-0">
-          <img src={stockDigitalApps} alt="" className="w-full h-full object-cover opacity-30" />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/75 to-primary/50" />
+          <img src={agencyDigitalWorkspace} alt="" className="w-full h-full object-cover opacity-25" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/60 to-transparent" />
         </div>
 
-        {/* Floating accent shapes */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <motion.div
-            className="absolute -top-20 -right-20 w-[500px] h-[500px] rounded-full border border-secondary/20"
+            className="absolute -top-20 -right-20 w-[500px] h-[500px] rounded-full border border-accent/20"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.5 }}
@@ -78,12 +77,6 @@ const Index = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
-          />
-          <motion.div
-            className="absolute top-[25%] right-[20%] w-16 h-16 rounded-lg bg-accent/25 rotate-45 animate-float"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
           />
         </div>
 
@@ -255,9 +248,7 @@ const Index = () => {
                   src={melissaDunn}
                   alt="Melissa Dunn — Founder"
                   className="w-full h-full object-cover object-top"
-                  style={{ objectPosition: "center 15%" }}
                 />
-                {/* Decorative accent */}
                 <div className="absolute -bottom-3 -right-3 w-full h-full border-2 border-accent rounded-2xl -z-10" />
               </div>
             </AnimatedSection>
@@ -319,7 +310,7 @@ const Index = () => {
       {/* ── CTA ── */}
       <section className="section-padding bg-primary relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={stockDigitalNetwork} alt="" className="w-full h-full object-cover opacity-15" />
+          <img src={agencyCampaignPlanning} alt="" className="w-full h-full object-cover opacity-15" />
           <div className="absolute inset-0 bg-primary/85" />
         </div>
         <div className="container-narrow text-center relative z-10">

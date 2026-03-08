@@ -4,52 +4,52 @@ import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import stockGraphicDesign from "@/assets/stock-graphic-design.jpg";
-import stockAdsPlatform from "@/assets/stock-ads-platform.jpg";
-import stockSocialMedia from "@/assets/stock-social-media.jpg";
-import stockPrinting from "@/assets/stock-printing.jpg";
-import stockContentCreation from "@/assets/stock-content-creation.jpg";
-import stockMobileApps from "@/assets/stock-mobile-apps.jpg";
+import agencyBrandDesign from "@/assets/agency-brand-design.jpg";
+import agencyStrategyRoom from "@/assets/agency-strategy-room.jpg";
+import agencySocialContent from "@/assets/agency-social-content.jpg";
+import agencyPrintCollateral from "@/assets/agency-print-collateral.jpg";
+import agencyCampaignPlanning from "@/assets/agency-campaign-planning.jpg";
+import agencyEmailMarketing from "@/assets/agency-email-marketing.jpg";
 
 const services = [
   {
     icon: Palette,
-    image: stockGraphicDesign,
+    image: agencyBrandDesign,
     title: "Brand Design",
     desc: "Professional design systems including logos, brand visuals, business cards, and communication materials that strengthen brand identity.",
     deliverables: ["Logos & brand marks", "Visual identity systems", "Business cards", "Brand guidelines"],
   },
   {
     icon: Target,
-    image: stockAdsPlatform,
+    image: agencyStrategyRoom,
     title: "Marketing Strategy",
     desc: "Strategic marketing planning that helps businesses define their message, identify their audience, and build approaches that support long-term growth.",
     deliverables: ["Marketing plans", "Campaign strategy", "Brand messaging", "Marketing consultation"],
   },
   {
     icon: Share2,
-    image: stockSocialMedia,
+    image: agencySocialContent,
     title: "Digital Content",
     desc: "Creative social media graphics and digital content designed to increase engagement and strengthen brand presence across platforms.",
     deliverables: ["Social media graphics", "Campaign visuals", "Content templates", "Branded posts"],
   },
   {
     icon: FileText,
-    image: stockPrinting,
+    image: agencyPrintCollateral,
     title: "Marketing Collateral",
     desc: "Marketing materials such as brochures, presentations, digital assets, and promotional graphics that support brand communication.",
     deliverables: ["Pitch decks", "Sell sheets", "Brochures & flyers", "Email marketing graphics"],
   },
   {
     icon: PenTool,
-    image: stockContentCreation,
+    image: agencyCampaignPlanning,
     title: "Creative Campaigns",
     desc: "End-to-end campaign design from concept to execution, supporting brand visibility and audience engagement across digital and print.",
     deliverables: ["Campaign concepts", "Ad creatives", "Launch materials", "Cross-channel assets"],
   },
   {
     icon: Presentation,
-    image: stockMobileApps,
+    image: agencyEmailMarketing,
     title: "Social Media Design",
     desc: "Custom social media templates and branded content designs that keep your brand consistent and engaging across every platform.",
     deliverables: ["Platform templates", "Story designs", "Carousel graphics", "Profile branding"],
@@ -63,7 +63,7 @@ const Services = () => {
 
       <section className="pt-32 pb-16 section-padding bg-primary relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={stockGraphicDesign} alt="" className="w-full h-full object-cover opacity-15" />
+          <img src={agencyBrandDesign} alt="" className="w-full h-full object-cover opacity-15" />
           <div className="absolute inset-0 bg-primary/85" />
         </div>
         <div className="container-narrow relative z-10">

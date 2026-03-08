@@ -3,8 +3,8 @@ import { ArrowRight } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import melissaDunn from "@/assets/melissa-dunn.jpg";
-import stockBrandStrategy from "@/assets/stock-brand-strategy.jpg";
+import melissaDunn from "@/assets/melissa-dunn-cropped.jpg";
+import agencyStrategyRoom from "@/assets/agency-strategy-room.jpg";
 
 const About = () => {
   return (
@@ -13,7 +13,7 @@ const About = () => {
 
       <section className="pt-32 pb-16 section-padding bg-primary relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={stockBrandStrategy} alt="" className="w-full h-full object-cover opacity-15" />
+          <img src={agencyStrategyRoom} alt="" className="w-full h-full object-cover opacity-15" />
           <div className="absolute inset-0 bg-primary/85" />
         </div>
         <div className="container-narrow relative z-10">
@@ -28,40 +28,52 @@ const About = () => {
 
       <section className="section-padding bg-card">
         <div className="container-narrow">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
             <AnimatedSection>
-              <div className="relative max-w-md mx-auto">
-                <div className="rounded-2xl overflow-hidden aspect-[3/4]">
-                  <img
-                    src={melissaDunn}
-                    alt="Melissa Dunn — Founder of The Dunn Company"
-                    className="w-full h-full object-cover object-top"
-                    style={{ objectPosition: "center 15%" }}
-                  />
+              <div className="sticky top-28">
+                <div className="relative max-w-md mx-auto">
+                  <div className="rounded-2xl overflow-hidden aspect-[3/4]">
+                    <img
+                      src={melissaDunn}
+                      alt="Melissa Dunn — Founder of The Dunn Company"
+                      className="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                  {/* Decorative frame */}
+                  <div className="absolute -bottom-3 -right-3 w-full h-full border-2 border-accent rounded-2xl -z-10" />
                 </div>
-                {/* Decorative frame */}
-                <div className="absolute -bottom-3 -right-3 w-full h-full border-2 border-accent rounded-2xl -z-10" />
+                <p className="text-muted-foreground text-sm text-center mt-5 italic">Melissa Dunn — Founder</p>
+                <blockquote className="mt-6 text-center px-4">
+                  <p className="text-foreground/80 italic text-base leading-relaxed font-body">
+                    "Design should feel intentional, balanced, and connected — much like the natural world around us."
+                  </p>
+                </blockquote>
               </div>
-              <p className="text-muted-foreground text-sm text-center mt-5 italic">Melissa Dunn — Founder</p>
             </AnimatedSection>
             <AnimatedSection delay={0.15}>
               <div>
                 <h2 className="text-3xl font-heading font-bold text-foreground mb-6">Meet Melissa</h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    The Dunn Company is a modern marketing and creative firm focused on helping businesses grow through strategic marketing, creative design, and digital communication.
+                    Melissa Dunn is a marketing and design professional with a rare combination of creative, technical, and production experience. She founded The Dunn Company to help brands grow through thoughtful marketing strategy, strong visual design, and clear communication.
                   </p>
                   <p>
-                    Its creative studio division, <span className="text-secondary font-medium">The Dunn Design Company</span>, specializes in brand design, marketing visuals, and digital content creation.
+                    Before building her own creative studio, Melissa spent years working across the full spectrum of the design and printing industry. Her background includes hands-on experience in graphic design, production design, prepress operations, and print production. She has managed prepress departments, prepared complex files for print, and operated commercial printing presses herself. This end-to-end knowledge gives her a deep understanding of how creative ideas move from concept to final production.
                   </p>
                   <p>
-                    The company was founded by Melissa Dunn, a marketing professional with experience in marketing strategy, graphic design, social media management, and digital content development.
+                    Today, Melissa brings that same production-level precision into her work with modern marketing and digital content. Through The Dunn Company and its creative studio division, <span className="text-secondary font-medium">The Dunn Design Company</span>, she helps businesses develop brand identities, marketing materials, presentations, and digital content that communicate clearly and perform effectively.
                   </p>
                   <p>
-                    Melissa combines creative thinking with strategic marketing insight to build brands that communicate clearly and connect with audiences.
+                    Melissa believes that the strongest marketers today are those who understand both creativity and strategy. As a lifelong learner, she continuously expands her knowledge in areas such as marketing strategy, technology, artificial intelligence, and digital systems so she can better serve modern businesses and evolving industries.
                   </p>
                   <p>
-                    Based in Columbia, Maryland — conveniently located between Washington DC and Baltimore — The Dunn Company works with clients locally and remotely worldwide.
+                    Based in Columbia, Maryland — conveniently located between Washington DC and Baltimore — Melissa works with clients both locally and remotely.
+                  </p>
+                  <p>
+                    Outside of her professional work, Melissa values staying curious and connected to the world around her. She enjoys spending time outdoors and believes that nature often provides the best inspiration for thoughtful design. One of her long-time creative influences is architect Frank Lloyd Wright, whose philosophy of designing in harmony with the environment continues to inspire her approach to creativity, balance, and intentional design.
+                  </p>
+                  <p>
+                    Melissa is also passionate about giving back to her community. She volunteers her time and creative skills when she can and believes strongly in using design to help organizations and causes that make a difference.
                   </p>
                 </div>
                 <Link
