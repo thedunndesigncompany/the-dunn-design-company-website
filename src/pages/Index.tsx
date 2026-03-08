@@ -4,7 +4,7 @@ import { ArrowRight, Palette, Presentation, Target, MessageSquare, Lightbulb, Ro
 import AnimatedSection from "@/components/AnimatedSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import heroWorkspace from "@/assets/hero-workspace.jpg";
+import heroBg from "@/assets/hero-bg.jpg";
 import homeGraphicDesign from "@/assets/home-graphic-design.jpg";
 import homeProductionDesign from "@/assets/home-production-design.jpg";
 import homeStrategy from "@/assets/home-strategy.jpg";
