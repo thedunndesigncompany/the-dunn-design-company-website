@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import stockDigitalMarketing from "@/assets/stock-digital-marketing.jpg";
+import stockContentCreation from "@/assets/stock-content-creation.jpg";
 
 const Contact = () => {
-  const [form, setForm] = useState({ name: "", email: "", company: "", type: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", company: "", message: "" });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -20,7 +20,7 @@ const Contact = () => {
 
       <section className="pt-32 pb-16 section-padding bg-primary relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={stockDigitalMarketing} alt="" className="w-full h-full object-cover opacity-15" />
+          <img src={stockContentCreation} alt="" className="w-full h-full object-cover opacity-15" />
           <div className="absolute inset-0 bg-primary/85" />
         </div>
         <div className="container-narrow relative z-10">
@@ -76,21 +76,6 @@ const Contact = () => {
                       className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-secondary/50 transition-shadow"
                       placeholder="Your company"
                     />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-heading font-medium text-foreground mb-2">Project Type</label>
-                    <select
-                      value={form.type}
-                      onChange={(e) => setForm({ ...form, type: e.target.value })}
-                      className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-secondary/50 transition-shadow"
-                    >
-                      <option value="">Select a project type</option>
-                      <option value="strategy">Marketing Strategy</option>
-                      <option value="design">Brand & Graphic Design</option>
-                      <option value="social">Social Media Content</option>
-                      <option value="collateral">Marketing Collateral</option>
-                      <option value="other">Other</option>
-                    </select>
                   </div>
                   <div>
                     <label className="block text-sm font-heading font-medium text-foreground mb-2">Message</label>

@@ -7,10 +7,18 @@ const Footer = () => {
       <div className="container-narrow px-6 py-16">
         <div className="grid md:grid-cols-3 gap-12">
           <div>
-            <h3 className="text-lg font-heading font-bold mb-1">The Dunn Company</h3>
-            <p className="text-primary-foreground/50 text-xs font-heading mb-1">
-              Strategic Marketing & Brand Growth
-            </p>
+            <div className="flex items-center gap-3 mb-3">
+              {/* Logo Placeholder — The Dunn Design Company */}
+              <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center flex-shrink-0">
+                <span className="text-accent-foreground font-heading font-bold text-sm">DD</span>
+              </div>
+              <div>
+                <h3 className="text-lg font-heading font-bold">The Dunn Company</h3>
+                <p className="text-primary-foreground/50 text-xs font-heading">
+                  Strategic Marketing & Brand Growth
+                </p>
+              </div>
+            </div>
             <p className="text-primary-foreground/50 text-xs font-heading mb-3">
               Creative Studio: The Dunn Design Company
             </p>
