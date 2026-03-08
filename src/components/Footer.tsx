@@ -49,7 +49,7 @@ const Footer = () => {
                 <Mail size={14} /> melissa@dunndesignz.com
               </a>
               <a href="mailto:thedunndesigncompany@gmail.com" className="flex items-center gap-2 text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">
-                <Mail size={14} /> thedunndesigncompany@gmail.com <span className="text-primary-foreground/40 text-xs">(backup)</span>
+                <Mail size={14} /> thedunndesigncompany@gmail.com
               </a>
               <a href="tel:410-440-7479" className="flex items-center gap-2 text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">
                 <Phone size={14} /> 410-440-7479
