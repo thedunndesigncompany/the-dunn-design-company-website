@@ -4,45 +4,47 @@ import { ArrowRight, Palette, Presentation, Target, MessageSquare, Lightbulb, Ro
 import AnimatedSection from "@/components/AnimatedSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import agencyMacbookWork from "@/assets/agency-macbook-work.jpg";
-import agencyCreativeDirection from "@/assets/agency-creative-direction.jpg";
-import agencyBrightWorkspace from "@/assets/agency-bright-workspace.jpg";
+import heroWorkspace from "@/assets/hero-workspace.jpg";
+import homeGraphicDesign from "@/assets/home-graphic-design.jpg";
+import homeProductionDesign from "@/assets/home-production-design.jpg";
+import homeStrategy from "@/assets/home-strategy.jpg";
+import featuredBrandIdentity from "@/assets/featured-brand-identity.jpg";
+import featuredPrintDesign from "@/assets/featured-print-design.jpg";
+import featuredSocialMedia from "@/assets/featured-social-media.jpg";
+import featuredStrategy from "@/assets/featured-strategy.jpg";
+import featuredCreativeDirection from "@/assets/featured-creative-direction.jpg";
+import featuredDigitalDesign from "@/assets/featured-digital-design.jpg";
 import agencyMarketingFlatlay from "@/assets/agency-marketing-flatlay.jpg";
-import agencyPrintProduction from "@/assets/agency-print-production.jpg";
-import agencySocialBright from "@/assets/agency-social-bright.jpg";
-import agencyStrategyBright from "@/assets/agency-strategy-bright.jpg";
-import agencyDigitalBright from "@/assets/agency-digital-bright.jpg";
-import agencyBrandingMaterials from "@/assets/agency-branding-materials.jpg";
 import melissaDunn from "@/assets/melissa-dunn-cropped.jpg";
 
 const whatWeDo = [
   {
     icon: Palette,
-    image: agencyMacbookWork,
+    image: homeGraphicDesign,
     title: "Graphic Design",
     desc: "Logos, brand identity, business cards, marketing materials.",
   },
   {
     icon: Presentation,
-    image: agencyPrintProduction,
+    image: homeProductionDesign,
     title: "Production Design",
     desc: "Pitch decks, sell sheets, presentations, printed assets.",
   },
   {
     icon: Target,
-    image: agencyStrategyBright,
+    image: homeStrategy,
     title: "Marketing & Creative Strategy",
     desc: "Campaign concepts, brand positioning, digital marketing.",
   },
 ];
 
 const featuredWork = [
-  { image: agencyMacbookWork, title: "Brand Identity Systems", label: "Graphic Design" },
-  { image: agencyPrintProduction, title: "Print & Production Design", label: "Production Design" },
-  { image: agencySocialBright, title: "Social Media Campaigns", label: "Digital Marketing" },
-  { image: agencyStrategyBright, title: "Strategic Marketing", label: "Strategy & Analytics" },
-  { image: agencyCreativeDirection, title: "Creative Direction", label: "Creative Direction" },
-  { image: agencyDigitalBright, title: "Email & Digital Content", label: "Digital Design" },
+  { image: featuredBrandIdentity, title: "Brand Identity Systems", label: "Graphic Design" },
+  { image: featuredPrintDesign, title: "Print & Production Design", label: "Production Design" },
+  { image: featuredSocialMedia, title: "Social Media Campaigns", label: "Digital Marketing" },
+  { image: featuredStrategy, title: "Strategic Marketing", label: "Strategy & Analytics" },
+  { image: featuredCreativeDirection, title: "Creative Direction", label: "Creative Direction" },
+  { image: featuredDigitalDesign, title: "Email & Digital Content", label: "Digital Design" },
 ];
 
 const processSteps = [
@@ -60,7 +62,7 @@ const Index = () => {
       {/* ── Hero ── */}
       <section className="relative min-h-screen flex items-center overflow-hidden bg-primary">
         <div className="absolute inset-0">
-          <img src={agencyBrightWorkspace} alt="" className="w-full h-full object-cover opacity-40" />
+          <img src={heroWorkspace} alt="" className="w-full h-full object-cover opacity-40" />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/75 via-primary/50 to-primary/30" />
         </div>
 

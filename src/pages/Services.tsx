@@ -4,53 +4,54 @@ import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import agencyBrightWorkspace from "@/assets/agency-bright-workspace.jpg";
-import agencyMacbookWork from "@/assets/agency-macbook-work.jpg";
-import agencyStrategyBright from "@/assets/agency-strategy-bright.jpg";
-import agencySocialBright from "@/assets/agency-social-bright.jpg";
-import agencyPrintProduction from "@/assets/agency-print-production.jpg";
+import heroWorkspace from "@/assets/hero-workspace.jpg";
+import serviceBrandDesign from "@/assets/service-brand-design.jpg";
+import serviceMarketingStrategy from "@/assets/service-marketing-strategy.jpg";
+import serviceDigitalContent from "@/assets/service-digital-content.jpg";
+import serviceCollateral from "@/assets/service-collateral-new.jpg";
+import serviceCampaigns from "@/assets/service-campaigns.jpg";
+import serviceSocialDesign from "@/assets/service-social-design.jpg";
 import agencyMarketingFlatlay from "@/assets/agency-marketing-flatlay.jpg";
-import agencyDigitalBright from "@/assets/agency-digital-bright.jpg";
 
 const services = [
   {
     icon: Palette,
-    image: agencyMacbookWork,
+    image: serviceBrandDesign,
     title: "Brand Design",
     desc: "Professional design systems including logos, brand visuals, business cards, and communication materials that strengthen brand identity.",
     deliverables: ["Logos & brand marks", "Visual identity systems", "Business cards", "Brand guidelines"],
   },
   {
     icon: Target,
-    image: agencyStrategyBright,
+    image: serviceMarketingStrategy,
     title: "Marketing Strategy",
     desc: "Strategic marketing planning that helps businesses define their message, identify their audience, and build approaches that support long-term growth.",
     deliverables: ["Marketing plans", "Campaign strategy", "Brand messaging", "Marketing consultation"],
   },
   {
     icon: Share2,
-    image: agencySocialBright,
+    image: serviceDigitalContent,
     title: "Digital Content",
     desc: "Creative social media graphics and digital content designed to increase engagement and strengthen brand presence across platforms.",
     deliverables: ["Social media graphics", "Campaign visuals", "Content templates", "Branded posts"],
   },
   {
     icon: FileText,
-    image: agencyPrintProduction,
+    image: serviceCollateral,
     title: "Marketing Collateral",
     desc: "Marketing materials such as brochures, presentations, digital assets, and promotional graphics that support brand communication.",
     deliverables: ["Pitch decks", "Sell sheets", "Brochures & flyers", "Email marketing graphics"],
   },
   {
     icon: PenTool,
-    image: agencyMarketingFlatlay,
+    image: serviceCampaigns,
     title: "Creative Campaigns",
     desc: "End-to-end campaign design from concept to execution, supporting brand visibility and audience engagement across digital and print.",
     deliverables: ["Campaign concepts", "Ad creatives", "Launch materials", "Cross-channel assets"],
   },
   {
     icon: Presentation,
-    image: agencyDigitalBright,
+    image: serviceSocialDesign,
     title: "Social Media Design",
     desc: "Custom social media templates and branded content designs that keep your brand consistent and engaging across every platform.",
     deliverables: ["Platform templates", "Story designs", "Carousel graphics", "Profile branding"],
@@ -64,7 +65,7 @@ const Services = () => {
 
       <section className="pt-32 pb-16 section-padding bg-primary relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={agencyBrightWorkspace} alt="" className="w-full h-full object-cover opacity-30" />
+          <img src={heroWorkspace} alt="" className="w-full h-full object-cover opacity-30" />
           <div className="absolute inset-0 bg-primary/70" />
         </div>
         <div className="container-narrow relative z-10">
