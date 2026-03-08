@@ -15,6 +15,7 @@ import agencyDigitalBright from "@/assets/agency-digital-bright.jpg";
 import agencyStrategyBright from "@/assets/agency-strategy-bright.jpg";
 import agencyCreativeDirection from "@/assets/agency-creative-direction.jpg";
 import agencyBrightWorkspace from "@/assets/agency-bright-workspace.jpg";
+import portfolioHero from "@/assets/portfolio-hero.jpg";
 
 const brandingItems: PortfolioItemData[] = [
   {
