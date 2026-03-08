@@ -1,9 +1,18 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Palette, Presentation, Target, MessageSquare, Lightbulb, Rocket, TrendingUp, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import {
+  GraphicDesignIcon,
+  ProductionDesignIcon,
+  StrategyIcon,
+  DiscoverIcon,
+  DesignProcessIcon,
+  LaunchIcon,
+  GrowIcon,
+} from "@/components/icons/ServiceIcons";
 import heroBg from "@/assets/hero-bg.jpg";
 import homeGraphicDesign from "@/assets/home-graphic-design.jpg";
 import homeProductionDesign from "@/assets/home-production-design.jpg";
@@ -19,19 +28,19 @@ import melissaDunn from "@/assets/melissa-dunn-cropped.jpg";
 
 const whatWeDo = [
   {
-    icon: Palette,
+    Icon: GraphicDesignIcon,
     image: homeGraphicDesign,
     title: "Graphic Design",
     desc: "Logos, brand identity, business cards, marketing materials.",
   },
   {
-    icon: Presentation,
+    Icon: ProductionDesignIcon,
     image: homeProductionDesign,
     title: "Production Design",
     desc: "Pitch decks, sell sheets, presentations, printed assets.",
   },
   {
-    icon: Target,
+    Icon: StrategyIcon,
     image: homeStrategy,
     title: "Marketing & Creative Strategy",
     desc: "Campaign concepts, brand positioning, digital marketing.",
@@ -48,10 +57,10 @@ const featuredWork = [
 ];
 
 const processSteps = [
-  { icon: MessageSquare, title: "Discover", desc: "Understand the brand and audience." },
-  { icon: Lightbulb, title: "Design", desc: "Build strategic visuals and messaging." },
-  { icon: Rocket, title: "Launch", desc: "Execute across digital channels." },
-  { icon: TrendingUp, title: "Grow", desc: "Measure and refine for long-term success." },
+  { Icon: DiscoverIcon, title: "Discover", desc: "Understand the brand and audience." },
+  { Icon: DesignProcessIcon, title: "Design", desc: "Build strategic visuals and messaging." },
+  { Icon: LaunchIcon, title: "Launch", desc: "Execute across digital channels." },
+  { Icon: GrowIcon, title: "Grow", desc: "Measure and refine for long-term success." },
 ];
 
 const Index = () => {
@@ -162,7 +171,7 @@ const Index = () => {
                   </div>
                   <div className="p-6 text-center">
                     <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mx-auto mb-4">
-                      <item.icon className="text-secondary" size={24} />
+                      <item.Icon className="text-secondary" size={24} />
                     </div>
                     <h3 className="font-heading font-bold text-xl text-foreground mb-3">{item.title}</h3>
                     <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
@@ -279,7 +288,7 @@ const Index = () => {
               <AnimatedSection key={step.title} delay={i * 0.1}>
                 <div className="text-center relative">
                   <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center mx-auto mb-5 relative z-10 border-4 border-card">
-                    <step.icon className="text-accent" size={28} />
+                    <step.Icon className="text-accent" size={28} />
                   </div>
                   <span className="text-accent font-heading font-bold text-xs uppercase tracking-widest">
                     Step {i + 1}
@@ -301,7 +310,24 @@ const Index = () => {
         </div>
         <div className="container-narrow text-center relative z-10">
           <AnimatedSection>
-            <Sparkles className="text-accent mx-auto mb-4" size={32} />
+            {/* Animated floating circles like About page */}
+            <div className="flex justify-center gap-6 mb-6">
+              <motion.div
+                animate={{ y: [0, -12, 0] }}
+                transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+                className="w-3 h-3 rounded-full bg-accent/40"
+              />
+              <motion.div
+                animate={{ y: [0, -12, 0] }}
+                transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                className="w-4 h-4 rounded-full bg-secondary/30"
+              />
+              <motion.div
+                animate={{ y: [0, -12, 0] }}
+                transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                className="w-3.5 h-3.5 rounded-full bg-accent/30"
+              />
+            </div>
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-primary-foreground mb-6">
               Let's Build Something Great
             </h2>

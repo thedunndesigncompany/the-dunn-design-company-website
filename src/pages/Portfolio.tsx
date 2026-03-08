@@ -267,7 +267,7 @@ const Portfolio = () => {
 
       <section className="pt-32 pb-16 section-padding bg-primary relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={agencyBrandingMaterials} alt="" className="w-full h-full object-cover opacity-25" />
+          <img src={portfolioHero} alt="" className="w-full h-full object-cover opacity-25" />
           <div className="absolute inset-0 bg-primary/75" />
         </div>
         <div className="container-narrow relative z-10">
