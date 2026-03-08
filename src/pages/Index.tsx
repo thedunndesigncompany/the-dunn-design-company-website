@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Palette, Target, Share2, Sparkles, MessageSquare, Lightbulb, Rocket, TrendingUp } from "lucide-react";
+import { ArrowRight, Palette, Presentation, Target, MessageSquare, Lightbulb, Rocket, TrendingUp, Sparkles } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -8,35 +8,31 @@ import portfolio1 from "@/assets/portfolio-1.jpg";
 import portfolio2 from "@/assets/portfolio-2.jpg";
 import portfolio3 from "@/assets/portfolio-3.jpg";
 import portfolio4 from "@/assets/portfolio-4.jpg";
-import portfolio5 from "@/assets/portfolio-5.jpg";
-import portfolio6 from "@/assets/portfolio-6.jpg";
 import aboutPortrait from "@/assets/about-portrait.jpg";
 
 const whatWeDo = [
   {
     icon: Palette,
-    title: "Brand Design",
-    desc: "Logos, visual identity, and brand systems.",
+    title: "Graphic Design",
+    desc: "Logos, brand identity, business cards, marketing materials.",
+  },
+  {
+    icon: Presentation,
+    title: "Production Design",
+    desc: "Pitch decks, sell sheets, presentations, printed assets.",
   },
   {
     icon: Target,
-    title: "Marketing Strategy",
-    desc: "Campaign strategy, messaging, and brand growth planning.",
-  },
-  {
-    icon: Share2,
-    title: "Digital Content",
-    desc: "Social media graphics, marketing assets, and visual storytelling.",
+    title: "Marketing & Creative Strategy",
+    desc: "Campaign concepts, brand positioning, digital marketing.",
   },
 ];
 
-const recentWork = [
-  { image: portfolio1, title: "Brand Identity System", label: "Brand Identity" },
-  { image: portfolio2, title: "Social Media Campaign", label: "Social Media Campaign" },
-  { image: portfolio3, title: "Conference Branding", label: "Event Branding" },
-  { image: portfolio4, title: "Product Packaging Suite", label: "Packaging Design" },
-  { image: portfolio5, title: "Digital Ad Campaign", label: "Digital Marketing Graphics" },
-  { image: portfolio6, title: "Nonprofit Visual Identity", label: "Brand Identity" },
+const featuredWork = [
+  { image: portfolio1, title: "Strategic Brand Launch Campaign", label: "Brand Identity" },
+  { image: portfolio2, title: "Corporate Identity Redesign", label: "Brand & Graphic Design" },
+  { image: portfolio3, title: "Social Media Engagement Campaign", label: "Social Media Campaign" },
+  { image: portfolio4, title: "Marketing Collateral Suite", label: "Production Design" },
 ];
 
 const processSteps = [
@@ -53,23 +49,19 @@ const Index = () => {
 
       {/* ── Hero ── */}
       <section className="relative min-h-screen flex items-center overflow-hidden bg-primary">
-        {/* Animated background shapes */}
         <div className="absolute inset-0 overflow-hidden">
-          {/* Large circle */}
           <motion.div
             className="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full bg-secondary/10 animate-float"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2 }}
           />
-          {/* Yellow accent blob */}
           <motion.div
             className="absolute bottom-20 right-[15%] w-72 h-72 rounded-full bg-accent/15 animate-float-slow"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
           />
-          {/* Small floating shapes */}
           <motion.div
             className="absolute top-[30%] right-[25%] w-20 h-20 rounded-lg bg-secondary/20 rotate-45 animate-float"
             initial={{ opacity: 0 }}
@@ -88,7 +80,6 @@ const Index = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1.0 }}
           />
-          {/* Geometric lines */}
           <svg className="absolute inset-0 w-full h-full opacity-[0.06]" xmlns="http://www.w3.org/2000/svg">
             <line x1="60%" y1="0" x2="40%" y2="100%" stroke="white" strokeWidth="1" />
             <line x1="70%" y1="0" x2="50%" y2="100%" stroke="white" strokeWidth="0.5" />
@@ -110,7 +101,7 @@ const Index = () => {
               </span>
               <span className="text-primary-foreground/30 mx-3">•</span>
               <span className="text-primary-foreground/40 font-heading text-sm">
-                Strategic Marketing + Brand Growth
+                Strategic Marketing & Brand Growth
               </span>
             </motion.div>
 
@@ -185,7 +176,7 @@ const Index = () => {
             {whatWeDo.map((item, i) => (
               <AnimatedSection key={item.title} delay={i * 0.1}>
                 <motion.div
-                  whileHover={{ y: -8, boxShadow: "0 20px 40px -12px rgba(15,31,61,0.15)" }}
+                  whileHover={{ y: -8, boxShadow: "0 20px 40px -12px rgba(11,31,59,0.15)" }}
                   className="bg-background rounded-2xl p-8 border border-border hover:border-secondary/30 transition-all duration-300 text-center h-full"
                 >
                   <div className="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center mx-auto mb-5">
@@ -200,7 +191,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ── Recent Work ── */}
+      {/* ── Featured Work ── */}
       <section className="section-padding bg-background">
         <div className="container-narrow">
           <AnimatedSection>
@@ -208,29 +199,29 @@ const Index = () => {
               Portfolio
             </p>
             <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground text-center mb-14">
-              Recent Work
+              Featured Work
             </h2>
           </AnimatedSection>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {recentWork.map((project, i) => (
+          <div className="grid sm:grid-cols-2 gap-8">
+            {featuredWork.map((project, i) => (
               <AnimatedSection key={project.title} delay={i * 0.08}>
                 <Link to="/portfolio">
                   <motion.div
                     whileHover={{ y: -6 }}
                     className="group rounded-2xl overflow-hidden bg-card border border-border hover:shadow-xl transition-all duration-300"
                   >
-                    <div className="aspect-[4/3] overflow-hidden">
+                    <div className="aspect-[16/10] overflow-hidden">
                       <img
                         src={project.image}
                         alt={project.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
-                    <div className="p-5">
+                    <div className="p-6">
                       <span className="text-xs font-heading font-semibold text-secondary uppercase tracking-wider">
                         {project.label}
                       </span>
-                      <h3 className="font-heading font-bold text-foreground mt-1">{project.title}</h3>
+                      <h3 className="font-heading font-bold text-lg text-foreground mt-1">{project.title}</h3>
                     </div>
                   </motion.div>
                 </Link>
@@ -299,7 +290,6 @@ const Index = () => {
             </h2>
           </AnimatedSection>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
-            {/* Connecting line on desktop */}
             <div className="hidden lg:block absolute top-10 left-[12.5%] right-[12.5%] h-0.5 bg-border" />
             {processSteps.map((step, i) => (
               <AnimatedSection key={step.title} delay={i * 0.1}>
@@ -321,7 +311,6 @@ const Index = () => {
 
       {/* ── CTA ── */}
       <section className="section-padding bg-primary relative overflow-hidden">
-        {/* Decorative elements */}
         <motion.div
           className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-accent/10 animate-float"
           initial={{ opacity: 0 }}

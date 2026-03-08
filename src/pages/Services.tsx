@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Target, Palette, Share2, FileText, ArrowRight, Megaphone, PenTool } from "lucide-react";
+import { Palette, Presentation, Target, Share2, FileText, PenTool, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import Header from "@/components/Header";
@@ -11,23 +11,23 @@ import serviceCollateral from "@/assets/service-collateral.jpg";
 
 const services = [
   {
+    icon: Palette,
+    image: serviceDesign,
+    title: "Brand Design",
+    desc: "Professional design systems including logos, brand visuals, business cards, and communication materials that strengthen brand identity.",
+    deliverables: ["Logos & brand marks", "Visual identity systems", "Business cards", "Brand guidelines"],
+  },
+  {
     icon: Target,
     image: serviceStrategy,
     title: "Marketing Strategy",
-    desc: "Strategic marketing planning that helps businesses define their message, identify their audience, and build marketing approaches that support long-term growth.",
+    desc: "Strategic marketing planning that helps businesses define their message, identify their audience, and build approaches that support long-term growth.",
     deliverables: ["Marketing plans", "Campaign strategy", "Brand messaging", "Marketing consultation"],
-  },
-  {
-    icon: Palette,
-    image: serviceDesign,
-    title: "Brand & Graphic Design",
-    desc: "Professional design systems including brand visuals, marketing graphics, and communication materials that strengthen brand identity.",
-    deliverables: ["Logos", "Marketing materials", "Brand graphics", "Print and digital design"],
   },
   {
     icon: Share2,
     image: serviceSocial,
-    title: "Social Media Content",
+    title: "Digital Content",
     desc: "Creative social media graphics and digital content designed to increase engagement and strengthen brand presence across platforms.",
     deliverables: ["Social media graphics", "Campaign visuals", "Content templates", "Branded posts"],
   },
@@ -36,17 +36,17 @@ const services = [
     image: serviceCollateral,
     title: "Marketing Collateral",
     desc: "Marketing materials such as brochures, presentations, digital assets, and promotional graphics that support brand communication.",
-    deliverables: ["Pitch decks", "Brochures", "Flyers", "Email marketing graphics", "Promotional materials"],
+    deliverables: ["Pitch decks", "Sell sheets", "Brochures & flyers", "Email marketing graphics"],
   },
   {
-    icon: Megaphone,
-    image: serviceStrategy,
+    icon: PenTool,
+    image: serviceDesign,
     title: "Creative Campaigns",
     desc: "End-to-end campaign design from concept to execution, supporting brand visibility and audience engagement across digital and print.",
     deliverables: ["Campaign concepts", "Ad creatives", "Launch materials", "Cross-channel assets"],
   },
   {
-    icon: PenTool,
+    icon: Presentation,
     image: serviceSocial,
     title: "Social Media Design",
     desc: "Custom social media templates and branded content designs that keep your brand consistent and engaging across every platform.",
