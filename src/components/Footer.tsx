@@ -29,7 +29,7 @@ const Footer = () => {
           <div>
             <h4 className="font-heading font-semibold mb-4 text-sm uppercase tracking-wider text-accent">Pages</h4>
             <nav className="flex flex-col gap-2">
-              {["Services", "Portfolio", "About", "Writing", "Contact"].map((page) => (
+              {["Services", "Portfolio", "About", "Contact"].map((page) => (
                 <Link
                   key={page}
                   to={`/${page.toLowerCase()}`}

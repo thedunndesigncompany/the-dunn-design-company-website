@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -47,6 +48,57 @@ const About = () => {
                     "Design should feel intentional, balanced, and connected — much like the natural world around us."
                   </p>
                 </blockquote>
+
+                {/* Decorative elements */}
+                <div className="mt-10 flex justify-center gap-6">
+                  <motion.div
+                    animate={{ y: [0, -8, 0] }}
+                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                    className="w-3 h-3 rounded-full bg-accent/60"
+                  />
+                  <motion.div
+                    animate={{ y: [0, -8, 0] }}
+                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
+                    className="w-2 h-2 rounded-full bg-secondary/50 mt-1"
+                  />
+                  <motion.div
+                    animate={{ y: [0, -8, 0] }}
+                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
+                    className="w-3 h-3 rounded-full bg-accent/40"
+                  />
+                </div>
+
+                <div className="mt-6 flex justify-center">
+                  <motion.div
+                    initial={{ scaleX: 0 }}
+                    whileInView={{ scaleX: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1, delay: 0.5 }}
+                    className="h-px w-32 bg-gradient-to-r from-transparent via-secondary/40 to-transparent"
+                  />
+                </div>
+
+                <div className="mt-6 flex justify-center gap-4">
+                  <motion.svg
+                    animate={{ rotate: [0, 360] }}
+                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                    width="24" height="24" viewBox="0 0 24 24" className="text-accent/30"
+                  >
+                    <polygon points="12,2 15,9 22,9 16,14 18,21 12,17 6,21 8,14 2,9 9,9" fill="currentColor" />
+                  </motion.svg>
+                  <motion.div
+                    animate={{ scale: [1, 1.15, 1] }}
+                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                    className="w-5 h-5 rounded-full border-2 border-secondary/25"
+                  />
+                  <motion.svg
+                    animate={{ rotate: [0, -360] }}
+                    transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+                    width="20" height="20" viewBox="0 0 24 24" className="text-accent/20"
+                  >
+                    <rect x="4" y="4" width="16" height="16" rx="2" fill="currentColor" />
+                  </motion.svg>
+                </div>
               </div>
             </AnimatedSection>
             <AnimatedSection delay={0.15}>
