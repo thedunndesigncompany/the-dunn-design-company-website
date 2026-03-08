@@ -7,11 +7,13 @@ import Footer from "@/components/Footer";
 import {
   BrandDesignIcon,
   MarketingStrategyIcon,
+  AISystemsIcon,
   DigitalContentIcon,
   CollateralIcon,
   CampaignIcon,
   SocialDesignIcon,
 } from "@/components/icons/ServiceIcons";
+import serviceAISystems from "@/assets/service-ai-systems.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
 import serviceBrandDesign from "@/assets/service-brand-design.jpg";
 import serviceMarketingStrategy from "@/assets/service-marketing-strategy.jpg";

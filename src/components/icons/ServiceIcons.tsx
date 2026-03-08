@@ -156,6 +156,21 @@ export const CampaignIcon = ({ className = "", size = 24 }: { className?: string
   </svg>
 );
 
+export const AISystemsIcon = ({ className = "", size = 24 }: { className?: string; size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 28 28" fill="none" className={className}>
+    {/* Brain with circuit nodes */}
+    <path d="M14 3C9 3 5 7 5 12c0 3 1.5 5.5 4 7v4h10v-4c2.5-1.5 4-4 4-7 0-5-4-9-9-9z" stroke="currentColor" strokeWidth="1.5" fill="none" />
+    <path d="M10 13h8M14 10v6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" opacity="0.5" />
+    {/* Circuit nodes */}
+    <circle cx="10" cy="13" r="1.5" fill="currentColor" opacity="0.4" />
+    <circle cx="18" cy="13" r="1.5" fill="currentColor" opacity="0.4" />
+    <circle cx="14" cy="10" r="1.5" fill="currentColor" opacity="0.4" />
+    <circle cx="14" cy="16" r="1.5" fill="currentColor" opacity="0.6" />
+    {/* Pulse lines */}
+    <path d="M3 20l3-2 2 3 3-4 2 3" stroke="currentColor" strokeWidth="1" strokeLinecap="round" opacity="0.25" />
+  </svg>
+);
+
 export const SocialDesignIcon = ({ className = "", size = 24 }: { className?: string; size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 28 28" fill="none" className={className}>
     {/* Grid of social cards */}
