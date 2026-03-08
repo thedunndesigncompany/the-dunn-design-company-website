@@ -4,35 +4,44 @@ import { ArrowRight, Palette, Presentation, Target, MessageSquare, Lightbulb, Ro
 import AnimatedSection from "@/components/AnimatedSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import portfolio1 from "@/assets/portfolio-1.jpg";
-import portfolio2 from "@/assets/portfolio-2.jpg";
-import portfolio3 from "@/assets/portfolio-3.jpg";
-import portfolio4 from "@/assets/portfolio-4.jpg";
+import stockDesignConcept from "@/assets/stock-design-concept.jpg";
+import stockColorSwatches from "@/assets/stock-color-swatches.jpg";
+import stockCreativeWorkspace from "@/assets/stock-creative-workspace.jpg";
+import stockDigitalMarketing from "@/assets/stock-digital-marketing.jpg";
+import stockPrintProduction from "@/assets/stock-print-production.jpg";
+import stockDesignStudio from "@/assets/stock-design-studio.jpg";
+import stockSocialAnalytics from "@/assets/stock-social-analytics.jpg";
+import stockAdsDashboard from "@/assets/stock-ads-dashboard.jpg";
 import aboutPortrait from "@/assets/about-portrait.jpg";
 
 const whatWeDo = [
   {
     icon: Palette,
+    image: stockDesignStudio,
     title: "Graphic Design",
     desc: "Logos, brand identity, business cards, marketing materials.",
   },
   {
     icon: Presentation,
+    image: stockPrintProduction,
     title: "Production Design",
     desc: "Pitch decks, sell sheets, presentations, printed assets.",
   },
   {
     icon: Target,
+    image: stockAdsDashboard,
     title: "Marketing & Creative Strategy",
     desc: "Campaign concepts, brand positioning, digital marketing.",
   },
 ];
 
 const featuredWork = [
-  { image: portfolio1, title: "Strategic Brand Launch Campaign", label: "Brand Identity" },
-  { image: portfolio2, title: "Corporate Identity Redesign", label: "Brand & Graphic Design" },
-  { image: portfolio3, title: "Social Media Engagement Campaign", label: "Social Media Campaign" },
-  { image: portfolio4, title: "Marketing Collateral Suite", label: "Production Design" },
+  { image: stockDesignConcept, title: "Brand Identity Systems", label: "Brand & Visual Design" },
+  { image: stockColorSwatches, title: "Print & Production Design", label: "Color Systems & Print" },
+  { image: stockSocialAnalytics, title: "Social Media Campaigns", label: "Digital Marketing" },
+  { image: stockCreativeWorkspace, title: "Creative Direction", label: "Art Direction & Strategy" },
+  { image: stockDigitalMarketing, title: "Digital Marketing Strategy", label: "Strategy & Analytics" },
+  { image: stockPrintProduction, title: "Marketing Collateral", label: "Print Production" },
 ];
 
 const processSteps = [
@@ -49,43 +58,38 @@ const Index = () => {
 
       {/* ── Hero ── */}
       <section className="relative min-h-screen flex items-center overflow-hidden bg-primary">
+        {/* Background image with overlay */}
+        <div className="absolute inset-0">
+          <img src={stockDesignStudio} alt="" className="w-full h-full object-cover opacity-20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/70" />
+        </div>
+
+        {/* Floating accent shapes */}
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
-            className="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full bg-secondary/10 animate-float"
+            className="absolute -top-20 -right-20 w-[500px] h-[500px] rounded-full border border-secondary/20"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.2 }}
+            transition={{ duration: 1.5 }}
           />
           <motion.div
-            className="absolute bottom-20 right-[15%] w-72 h-72 rounded-full bg-accent/15 animate-float-slow"
+            className="absolute bottom-20 right-[10%] w-64 h-64 rounded-full bg-accent/10 animate-float-slow"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
           />
           <motion.div
-            className="absolute top-[30%] right-[25%] w-20 h-20 rounded-lg bg-secondary/20 rotate-45 animate-float"
+            className="absolute top-[25%] right-[20%] w-16 h-16 rounded-lg bg-accent/20 rotate-45 animate-float"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           />
           <motion.div
-            className="absolute top-[60%] right-[40%] w-12 h-12 rounded-full bg-accent/25 animate-pulse-glow"
+            className="absolute top-[55%] right-[35%] w-10 h-10 rounded-full bg-secondary/15 animate-pulse-glow"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           />
-          <motion.div
-            className="absolute top-[15%] right-[45%] w-8 h-8 rounded-full bg-sky/20 animate-float-slow"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1.0 }}
-          />
-          <svg className="absolute inset-0 w-full h-full opacity-[0.06]" xmlns="http://www.w3.org/2000/svg">
-            <line x1="60%" y1="0" x2="40%" y2="100%" stroke="white" strokeWidth="1" />
-            <line x1="70%" y1="0" x2="50%" y2="100%" stroke="white" strokeWidth="0.5" />
-            <line x1="80%" y1="0" x2="60%" y2="100%" stroke="white" strokeWidth="0.5" />
-            <circle cx="65%" cy="35%" r="120" fill="none" stroke="white" strokeWidth="0.5" />
-          </svg>
         </div>
 
         <div className="relative z-10 container-narrow px-6 pt-24 pb-12">
@@ -176,14 +180,19 @@ const Index = () => {
             {whatWeDo.map((item, i) => (
               <AnimatedSection key={item.title} delay={i * 0.1}>
                 <motion.div
-                  whileHover={{ y: -8, boxShadow: "0 20px 40px -12px rgba(11,31,59,0.15)" }}
-                  className="bg-background rounded-2xl p-8 border border-border hover:border-secondary/30 transition-all duration-300 text-center h-full"
+                  whileHover={{ y: -8, boxShadow: "0 20px 40px -12px rgba(26,26,46,0.15)" }}
+                  className="bg-background rounded-2xl overflow-hidden border border-border hover:border-secondary/30 transition-all duration-300 h-full"
                 >
-                  <div className="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center mx-auto mb-5">
-                    <item.icon className="text-secondary" size={28} />
+                  <div className="aspect-[16/10] overflow-hidden">
+                    <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
-                  <h3 className="font-heading font-bold text-xl text-foreground mb-3">{item.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
+                  <div className="p-6 text-center">
+                    <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                      <item.icon className="text-secondary" size={24} />
+                    </div>
+                    <h3 className="font-heading font-bold text-xl text-foreground mb-3">{item.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
+                  </div>
                 </motion.div>
               </AnimatedSection>
             ))}
@@ -202,26 +211,26 @@ const Index = () => {
               Featured Work
             </h2>
           </AnimatedSection>
-          <div className="grid sm:grid-cols-2 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredWork.map((project, i) => (
-              <AnimatedSection key={project.title} delay={i * 0.08}>
+              <AnimatedSection key={project.title} delay={i * 0.06}>
                 <Link to="/portfolio">
                   <motion.div
                     whileHover={{ y: -6 }}
                     className="group rounded-2xl overflow-hidden bg-card border border-border hover:shadow-xl transition-all duration-300"
                   >
-                    <div className="aspect-[16/10] overflow-hidden">
+                    <div className="aspect-[4/3] overflow-hidden">
                       <img
                         src={project.image}
                         alt={project.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
-                    <div className="p-6">
+                    <div className="p-5">
                       <span className="text-xs font-heading font-semibold text-secondary uppercase tracking-wider">
                         {project.label}
                       </span>
-                      <h3 className="font-heading font-bold text-lg text-foreground mt-1">{project.title}</h3>
+                      <h3 className="font-heading font-bold text-foreground mt-1">{project.title}</h3>
                     </div>
                   </motion.div>
                 </Link>
@@ -311,18 +320,10 @@ const Index = () => {
 
       {/* ── CTA ── */}
       <section className="section-padding bg-primary relative overflow-hidden">
-        <motion.div
-          className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-accent/10 animate-float"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-        />
-        <motion.div
-          className="absolute -bottom-10 -left-10 w-48 h-48 rounded-full bg-secondary/10 animate-float-slow"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-        />
+        <div className="absolute inset-0">
+          <img src={stockColorSwatches} alt="" className="w-full h-full object-cover opacity-10" />
+          <div className="absolute inset-0 bg-primary/90" />
+        </div>
         <div className="container-narrow text-center relative z-10">
           <AnimatedSection>
             <Sparkles className="text-accent mx-auto mb-4" size={32} />

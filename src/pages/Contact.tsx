@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import stockDigitalMarketing from "@/assets/stock-digital-marketing.jpg";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", company: "", type: "", message: "" });
@@ -17,8 +18,12 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      <section className="pt-32 pb-16 section-padding bg-primary">
-        <div className="container-narrow">
+      <section className="pt-32 pb-16 section-padding bg-primary relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={stockDigitalMarketing} alt="" className="w-full h-full object-cover opacity-15" />
+          <div className="absolute inset-0 bg-primary/85" />
+        </div>
+        <div className="container-narrow relative z-10">
           <AnimatedSection>
             <p className="text-accent font-heading font-semibold text-sm uppercase tracking-widest mb-4">Get in Touch</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-primary-foreground max-w-3xl">
