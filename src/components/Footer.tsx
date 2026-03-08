@@ -9,7 +9,9 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-12">
           <div>
             <div className="flex items-center gap-3 mb-3">
-              <img src={logoImg} alt="The Dunn Company logo" className="h-12 w-auto flex-shrink-0 brightness-0 invert" />
+              <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center flex-shrink-0">
+                <span className="font-heading font-bold text-accent-foreground text-lg">DC</span>
+              </div>
               <div>
                 <h3 className="text-lg font-heading font-bold">The Dunn Company</h3>
                 <p className="text-primary-foreground/50 text-xs font-heading">
