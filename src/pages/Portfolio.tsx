@@ -6,41 +6,41 @@ import AnimatedSection from "@/components/AnimatedSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PortfolioGrid from "@/components/PortfolioGrid";
-import stockBrandStrategy from "@/assets/stock-brand-strategy.jpg";
-import stockGraphicDesign from "@/assets/stock-graphic-design.jpg";
-import stockContentCreation from "@/assets/stock-content-creation.jpg";
-import stockDigitalNetwork from "@/assets/stock-digital-network.jpg";
-import stockPrinting from "@/assets/stock-printing.jpg";
-import stockSocialMedia from "@/assets/stock-social-media.jpg";
-import stockAdsPlatform from "@/assets/stock-ads-platform.jpg";
-import stockMobileApps from "@/assets/stock-mobile-apps.jpg";
-import stockDigitalApps from "@/assets/stock-digital-apps.jpg";
-import stockDesignConcept from "@/assets/stock-design-concept.jpg";
-import stockColorExplosion from "@/assets/stock-color-explosion.jpg";
+import agencyBrandIdentity from "@/assets/agency-brand-identity.jpg";
+import agencyBrandDesign from "@/assets/agency-brand-design.jpg";
+import agencyPrintCollateral from "@/assets/agency-print-collateral.jpg";
+import agencyPitchMaterials from "@/assets/agency-pitch-materials.jpg";
+import agencySocialContent from "@/assets/agency-social-content.jpg";
+import agencyDigitalAnalytics from "@/assets/agency-digital-analytics.jpg";
+import agencyEmailMarketing from "@/assets/agency-email-marketing.jpg";
+import agencyCampaignPlanning from "@/assets/agency-campaign-planning.jpg";
+import agencyProductionStudio from "@/assets/agency-production-studio.jpg";
+import agencyStrategyRoom from "@/assets/agency-strategy-room.jpg";
+import agencyDigitalWorkspace from "@/assets/agency-digital-workspace.jpg";
 
 const graphicDesign = [
-  { image: stockBrandStrategy, title: "Tech Startup Brand Identity", type: "Logo & Brand System" },
-  { image: stockGraphicDesign, title: "Professional Services Rebrand", type: "Visual Identity" },
-  { image: stockDesignConcept, title: "Nonprofit Visual Identity", type: "Brand Guidelines" },
-  { image: stockColorExplosion, title: "Product Line Brand Package", type: "Business Cards & Collateral" },
+  { image: agencyBrandIdentity, title: "Tech Startup Brand Identity", type: "Logo & Brand System" },
+  { image: agencyBrandDesign, title: "Professional Services Rebrand", type: "Visual Identity" },
+  { image: agencyPrintCollateral, title: "Nonprofit Visual Identity", type: "Brand Guidelines" },
+  { image: agencyCampaignPlanning, title: "Product Line Brand Package", type: "Business Cards & Collateral" },
 ];
 
 const productionDesign = [
-  { image: stockPrinting, title: "Healthcare Outreach Materials", type: "Pitch Deck & Brochures" },
-  { image: stockContentCreation, title: "Retail Campaign Sell Sheets", type: "Sell Sheets & Presentations" },
-  { image: stockAdsPlatform, title: "Conference Speaker Kit", type: "Presentation Design" },
+  { image: agencyPitchMaterials, title: "Healthcare Outreach Materials", type: "Pitch Deck & Brochures" },
+  { image: agencyProductionStudio, title: "Retail Campaign Sell Sheets", type: "Sell Sheets & Presentations" },
+  { image: agencyStrategyRoom, title: "Conference Speaker Kit", type: "Presentation Design" },
 ];
 
 const marketingContent = [
-  { image: stockSocialMedia, title: "Retail Social Media Campaign", type: "Social Media Graphics" },
-  { image: stockDigitalNetwork, title: "Nonprofit Fundraising Campaign", type: "Email Marketing Visuals" },
-  { image: stockMobileApps, title: "Product Launch Digital Ads", type: "Campaign Assets" },
-  { image: stockDigitalApps, title: "Digital Marketing Suite", type: "Marketing Icons & Graphics" },
+  { image: agencySocialContent, title: "Retail Social Media Campaign", type: "Social Media Graphics" },
+  { image: agencyDigitalAnalytics, title: "Nonprofit Fundraising Campaign", type: "Email Marketing Visuals" },
+  { image: agencyEmailMarketing, title: "Product Launch Digital Ads", type: "Campaign Assets" },
+  { image: agencyDigitalWorkspace, title: "Digital Marketing Suite", type: "Marketing Icons & Graphics" },
 ];
 
 const caseStudies = [
   {
-    image: stockBrandStrategy,
+    image: agencyStrategyRoom,
     title: "Strategic Brand Launch Campaign",
     client: "Technology Startup",
     overview: "Developed a comprehensive go-to-market strategy for a technology startup entering a competitive market.",
@@ -49,7 +49,7 @@ const caseStudies = [
     results: "Successfully launched the brand with strong initial engagement and measurable audience growth within the first quarter.",
   },
   {
-    image: stockGraphicDesign,
+    image: agencyBrandDesign,
     title: "Corporate Identity Redesign",
     client: "Professional Services Firm",
     overview: "Complete visual identity overhaul for an established professional services firm seeking a modern refresh.",
@@ -58,7 +58,7 @@ const caseStudies = [
     results: "Delivered a cohesive brand identity that strengthened market positioning and improved client perception.",
   },
   {
-    image: stockSocialMedia,
+    image: agencySocialContent,
     title: "Social Media Engagement Campaign",
     client: "Retail Brand",
     overview: "Multi-platform social media strategy and content creation for a growing retail brand.",
@@ -77,7 +77,7 @@ const Portfolio = () => {
 
       <section className="pt-32 pb-16 section-padding bg-primary relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={stockColorExplosion} alt="" className="w-full h-full object-cover opacity-10" />
+          <img src={agencyBrandIdentity} alt="" className="w-full h-full object-cover opacity-10" />
           <div className="absolute inset-0 bg-primary/85" />
         </div>
         <div className="container-narrow relative z-10">

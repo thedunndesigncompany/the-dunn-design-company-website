@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import stockContentCreation from "@/assets/stock-content-creation.jpg";
+import agencyCampaignPlanning from "@/assets/agency-campaign-planning.jpg";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", company: "", message: "" });
@@ -20,7 +20,7 @@ const Contact = () => {
 
       <section className="pt-32 pb-16 section-padding bg-primary relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={stockContentCreation} alt="" className="w-full h-full object-cover opacity-15" />
+          <img src={agencyCampaignPlanning} alt="" className="w-full h-full object-cover opacity-15" />
           <div className="absolute inset-0 bg-primary/85" />
         </div>
         <div className="container-narrow relative z-10">
