@@ -1,58 +1,49 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Target, Palette, Share2, FileText, MessageSquare, Lightbulb, Rocket, TrendingUp } from "lucide-react";
+import { ArrowRight, Palette, Target, Share2, Sparkles, MessageSquare, Lightbulb, Rocket, TrendingUp } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import heroCreative from "@/assets/hero-creative.jpg";
-import serviceStrategy from "@/assets/service-strategy.jpg";
-import serviceDesign from "@/assets/service-design.jpg";
-import serviceSocial from "@/assets/service-social.jpg";
-import serviceCollateral from "@/assets/service-collateral.jpg";
 import portfolio1 from "@/assets/portfolio-1.jpg";
 import portfolio2 from "@/assets/portfolio-2.jpg";
 import portfolio3 from "@/assets/portfolio-3.jpg";
 import portfolio4 from "@/assets/portfolio-4.jpg";
+import portfolio5 from "@/assets/portfolio-5.jpg";
+import portfolio6 from "@/assets/portfolio-6.jpg";
+import aboutPortrait from "@/assets/about-portrait.jpg";
 
-const services = [
+const whatWeDo = [
   {
-    image: serviceStrategy,
+    icon: Palette,
+    title: "Brand Design",
+    desc: "Logos, visual identity, and brand systems.",
+  },
+  {
     icon: Target,
     title: "Marketing Strategy",
-    desc: "Strategic marketing planning that helps businesses define their message, identify their audience, and build marketing approaches that support long-term growth.",
+    desc: "Campaign strategy, messaging, and brand growth planning.",
   },
   {
-    image: serviceDesign,
-    icon: Palette,
-    title: "Brand & Graphic Design",
-    desc: "Professional design systems including brand visuals, marketing graphics, and communication materials that strengthen brand identity.",
-  },
-  {
-    image: serviceSocial,
     icon: Share2,
-    title: "Social Media Content",
-    desc: "Creative social media graphics and digital content designed to increase engagement and strengthen brand presence across platforms.",
-  },
-  {
-    image: serviceCollateral,
-    icon: FileText,
-    title: "Marketing Collateral",
-    desc: "Marketing materials such as brochures, presentations, digital assets, and promotional graphics that support brand communication.",
+    title: "Digital Content",
+    desc: "Social media graphics, marketing assets, and visual storytelling.",
   },
 ];
 
-const featuredWork = [
-  { image: portfolio1, title: "Brand Identity Design", category: "Brand & Graphic Design" },
-  { image: portfolio2, title: "Social Media Campaign Graphics", category: "Social Media" },
-  { image: portfolio3, title: "Marketing Case Study Layout", category: "Marketing Strategy" },
-  { image: portfolio4, title: "Digital Marketing Graphics", category: "Marketing Collateral" },
+const recentWork = [
+  { image: portfolio1, title: "Brand Identity System", label: "Brand Identity" },
+  { image: portfolio2, title: "Social Media Campaign", label: "Social Media Campaign" },
+  { image: portfolio3, title: "Conference Branding", label: "Event Branding" },
+  { image: portfolio4, title: "Product Packaging Suite", label: "Packaging Design" },
+  { image: portfolio5, title: "Digital Ad Campaign", label: "Digital Marketing Graphics" },
+  { image: portfolio6, title: "Nonprofit Visual Identity", label: "Brand Identity" },
 ];
 
-const steps = [
-  { icon: MessageSquare, title: "Discovery", desc: "Understanding the client's business, audience, and goals." },
-  { icon: Lightbulb, title: "Strategy", desc: "Developing a clear marketing and design direction." },
-  { icon: Rocket, title: "Design", desc: "Creating professional marketing visuals and digital assets." },
-  { icon: TrendingUp, title: "Growth", desc: "Supporting brand communication and long-term engagement." },
+const processSteps = [
+  { icon: MessageSquare, title: "Discover", desc: "Understand the brand and audience." },
+  { icon: Lightbulb, title: "Design", desc: "Build strategic visuals and messaging." },
+  { icon: Rocket, title: "Launch", desc: "Execute across digital channels." },
+  { icon: TrendingUp, title: "Grow", desc: "Measure and refine for long-term success." },
 ];
 
 const Index = () => {
@@ -60,169 +51,189 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img src={heroCreative} alt="" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-primary/80" />
+      {/* ── Hero ── */}
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-primary">
+        {/* Animated background shapes */}
+        <div className="absolute inset-0 overflow-hidden">
+          {/* Large circle */}
+          <motion.div
+            className="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full bg-secondary/10 animate-float"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.2 }}
+          />
+          {/* Yellow accent blob */}
+          <motion.div
+            className="absolute bottom-20 right-[15%] w-72 h-72 rounded-full bg-accent/15 animate-float-slow"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.4 }}
+          />
+          {/* Small floating shapes */}
+          <motion.div
+            className="absolute top-[30%] right-[25%] w-20 h-20 rounded-lg bg-secondary/20 rotate-45 animate-float"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          />
+          <motion.div
+            className="absolute top-[60%] right-[40%] w-12 h-12 rounded-full bg-accent/25 animate-pulse-glow"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          />
+          <motion.div
+            className="absolute top-[15%] right-[45%] w-8 h-8 rounded-full bg-sky/20 animate-float-slow"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 1.0 }}
+          />
+          {/* Geometric lines */}
+          <svg className="absolute inset-0 w-full h-full opacity-[0.06]" xmlns="http://www.w3.org/2000/svg">
+            <line x1="60%" y1="0" x2="40%" y2="100%" stroke="white" strokeWidth="1" />
+            <line x1="70%" y1="0" x2="50%" y2="100%" stroke="white" strokeWidth="0.5" />
+            <line x1="80%" y1="0" x2="60%" y2="100%" stroke="white" strokeWidth="0.5" />
+            <circle cx="65%" cy="35%" r="120" fill="none" stroke="white" strokeWidth="0.5" />
+          </svg>
         </div>
-        <div className="relative z-10 container-narrow px-6 pt-20">
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-accent font-heading font-bold text-lg md:text-xl mb-4"
-          >
-            The Dunn Company
-          </motion.p>
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-primary-foreground leading-tight max-w-4xl"
-          >
-            Design That Connects.<br />Marketing That Converts.
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="text-primary-foreground/80 text-lg md:text-xl max-w-2xl mt-6 leading-relaxed"
-          >
-            Creative marketing, strategic design, and digital content that helps brands grow and engage their audiences.
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="text-primary-foreground/60 text-base max-w-2xl mt-4 leading-relaxed"
-          >
-            The Dunn Company helps businesses strengthen their brands through strategic marketing, creative design, and modern digital communication.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.9 }}
-            className="mt-4"
-          >
-            <p className="text-sky font-heading font-medium text-sm">
+
+        <div className="relative z-10 container-narrow px-6 pt-24 pb-12">
+          <div className="max-w-3xl">
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="mb-6"
+            >
+              <span className="text-primary-foreground/60 font-heading font-semibold text-sm uppercase tracking-[0.2em]">
+                The Dunn Company
+              </span>
+              <span className="text-primary-foreground/30 mx-3">•</span>
+              <span className="text-primary-foreground/40 font-heading text-sm">
+                Strategic Marketing + Brand Growth
+              </span>
+            </motion.div>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+              className="text-5xl md:text-6xl lg:text-8xl font-heading font-bold text-primary-foreground leading-[0.95] mb-8"
+            >
+              Design That
+              <br />
+              Connects.
+              <br />
+              <span className="text-accent">Marketing</span>
+              <br />
+              That Converts.
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="text-primary-foreground/70 text-lg md:text-xl max-w-xl leading-relaxed mb-6"
+            >
+              Strategic marketing and creative design that help brands grow, engage, and stand out.
+            </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.8 }}
+              className="text-secondary font-heading font-medium text-sm tracking-wide mb-8"
+            >
               Creative Studio: The Dunn Design Company
-            </p>
-            <p className="text-primary-foreground/50 font-heading text-xs mt-1">
-              Founded by Melissa Dunn
-            </p>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.0 }}
-            className="flex flex-wrap gap-4 mt-8"
-          >
-            <Link
-              to="/portfolio"
-              className="inline-flex items-center gap-2 bg-coral text-coral-foreground px-8 py-4 rounded-lg font-heading font-semibold text-sm hover:opacity-90 transition-opacity"
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.9 }}
+              className="flex flex-wrap gap-4"
             >
-              View Portfolio <ArrowRight size={16} />
-            </Link>
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 border border-primary-foreground/30 text-primary-foreground px-8 py-4 rounded-lg font-heading font-semibold text-sm hover:bg-primary-foreground/10 transition-colors"
-            >
-              Start a Project
-            </Link>
-          </motion.div>
+              <Link
+                to="/portfolio"
+                className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-8 py-4 rounded-lg font-heading font-semibold text-sm hover:brightness-110 transition-all"
+              >
+                View Portfolio <ArrowRight size={16} />
+              </Link>
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 border border-primary-foreground/30 text-primary-foreground px-8 py-4 rounded-lg font-heading font-semibold text-sm hover:bg-primary-foreground/10 transition-colors"
+              >
+                Start a Project
+              </Link>
+            </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* Introduction */}
-      <section className="section-padding bg-background">
+      {/* ── What We Do ── */}
+      <section className="section-padding bg-card">
         <div className="container-narrow">
           <AnimatedSection>
-            <p className="text-accent font-heading font-semibold text-sm uppercase tracking-widest mb-4">Creative Division</p>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
-              Creative Studio: The Dunn Design Company
+            <p className="text-secondary font-heading font-semibold text-sm uppercase tracking-widest mb-3 text-center">
+              What We Do
+            </p>
+            <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground text-center mb-14">
+              Creative Services for Modern Brands
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-4">
-              The Dunn Design Company is the creative studio division of The Dunn Company. It focuses on brand design, marketing visuals, and digital content that help businesses communicate clearly and connect with their audiences.
-            </p>
-            <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl">
-              The studio blends marketing strategy with creative design to produce work that is visually compelling, strategically thoughtful, and built for modern digital communication.
-            </p>
           </AnimatedSection>
-        </div>
-      </section>
-
-      {/* Services */}
-      <section className="section-padding bg-muted/50">
-        <div className="container-narrow">
-          <AnimatedSection>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4 text-center">Creative Services</h2>
-            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
-              Strategic marketing and design solutions for modern brands.
-            </p>
-          </AnimatedSection>
-          <div className="grid md:grid-cols-2 gap-8">
-            {services.map((service, i) => (
-              <AnimatedSection key={service.title} delay={i * 0.1}>
+          <div className="grid md:grid-cols-3 gap-8">
+            {whatWeDo.map((item, i) => (
+              <AnimatedSection key={item.title} delay={i * 0.1}>
                 <motion.div
-                  whileHover={{ y: -4 }}
-                  className="bg-card rounded-xl border border-border hover:border-accent/30 hover:shadow-lg transition-all duration-300 overflow-hidden h-full"
+                  whileHover={{ y: -8, boxShadow: "0 20px 40px -12px rgba(15,31,61,0.15)" }}
+                  className="bg-background rounded-2xl p-8 border border-border hover:border-secondary/30 transition-all duration-300 text-center h-full"
                 >
-                  <div className="aspect-[16/9] overflow-hidden">
-                    <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
+                  <div className="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center mx-auto mb-5">
+                    <item.icon className="text-secondary" size={28} />
                   </div>
-                  <div className="p-8">
-                    <service.icon className="text-accent mb-3" size={28} />
-                    <h3 className="font-heading font-bold text-lg text-foreground mb-2">{service.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{service.desc}</p>
-                  </div>
+                  <h3 className="font-heading font-bold text-xl text-foreground mb-3">{item.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
                 </motion.div>
               </AnimatedSection>
             ))}
           </div>
-          <AnimatedSection>
-            <div className="text-center mt-12">
-              <Link
-                to="/services"
-                className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-8 py-4 rounded-lg font-heading font-semibold text-sm hover:opacity-90 transition-opacity"
-              >
-                View All Services <ArrowRight size={16} />
-              </Link>
-            </div>
-          </AnimatedSection>
         </div>
       </section>
 
-      {/* Selected Work */}
+      {/* ── Recent Work ── */}
       <section className="section-padding bg-background">
         <div className="container-narrow">
           <AnimatedSection>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4 text-center">Selected Work</h2>
-            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
-              A curated selection of creative marketing and design projects.
+            <p className="text-secondary font-heading font-semibold text-sm uppercase tracking-widest mb-3 text-center">
+              Portfolio
             </p>
+            <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground text-center mb-14">
+              Recent Work
+            </h2>
           </AnimatedSection>
-          <div className="grid sm:grid-cols-2 gap-8">
-            {featuredWork.map((project, i) => (
-              <AnimatedSection key={project.title} delay={i * 0.1}>
-                <motion.div
-                  whileHover={{ y: -6 }}
-                  className="group bg-card rounded-xl overflow-hidden border border-border hover:shadow-xl transition-all duration-300"
-                >
-                  <div className="aspect-[16/10] overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <span className="text-accent text-xs font-heading font-semibold uppercase tracking-wider">
-                      {project.category}
-                    </span>
-                    <h3 className="font-heading font-bold text-lg text-foreground mt-1">{project.title}</h3>
-                  </div>
-                </motion.div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {recentWork.map((project, i) => (
+              <AnimatedSection key={project.title} delay={i * 0.08}>
+                <Link to="/portfolio">
+                  <motion.div
+                    whileHover={{ y: -6 }}
+                    className="group rounded-2xl overflow-hidden bg-card border border-border hover:shadow-xl transition-all duration-300"
+                  >
+                    <div className="aspect-[4/3] overflow-hidden">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="p-5">
+                      <span className="text-xs font-heading font-semibold text-secondary uppercase tracking-wider">
+                        {project.label}
+                      </span>
+                      <h3 className="font-heading font-bold text-foreground mt-1">{project.title}</h3>
+                    </div>
+                  </motion.div>
+                </Link>
               </AnimatedSection>
             ))}
           </div>
@@ -230,7 +241,7 @@ const Index = () => {
             <div className="text-center mt-12">
               <Link
                 to="/portfolio"
-                className="inline-flex items-center gap-2 bg-coral text-coral-foreground px-8 py-4 rounded-lg font-heading font-semibold text-sm hover:opacity-90 transition-opacity"
+                className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-8 py-4 rounded-lg font-heading font-semibold text-sm hover:brightness-110 transition-all"
               >
                 View Full Portfolio <ArrowRight size={16} />
               </Link>
@@ -239,23 +250,67 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Our Process */}
-      <section className="section-padding bg-muted/50">
+      {/* ── About Preview ── */}
+      <section className="section-padding bg-sand">
+        <div className="container-narrow">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <AnimatedSection>
+              <div className="rounded-2xl overflow-hidden aspect-[4/5]">
+                <img
+                  src={aboutPortrait}
+                  alt="Melissa Dunn — Founder"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </AnimatedSection>
+            <AnimatedSection delay={0.15}>
+              <p className="text-secondary font-heading font-semibold text-sm uppercase tracking-widest mb-3">
+                About
+              </p>
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
+                Founded by Melissa Dunn
+              </h2>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+                The Dunn Company helps businesses grow through strategic marketing, creative design, and modern digital communication.
+              </p>
+              <p className="text-secondary font-heading font-medium text-sm mb-6">
+                Creative Studio: The Dunn Design Company
+              </p>
+              <Link
+                to="/about"
+                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-heading font-semibold text-sm hover:opacity-90 transition-opacity"
+              >
+                Learn More <ArrowRight size={16} />
+              </Link>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Process ── */}
+      <section className="section-padding bg-card">
         <div className="container-narrow">
           <AnimatedSection>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-12 text-center">
+            <p className="text-secondary font-heading font-semibold text-sm uppercase tracking-widest mb-3 text-center">
+              How We Work
+            </p>
+            <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground text-center mb-14">
               Our Process
             </h2>
           </AnimatedSection>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {steps.map((step, i) => (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+            {/* Connecting line on desktop */}
+            <div className="hidden lg:block absolute top-10 left-[12.5%] right-[12.5%] h-0.5 bg-border" />
+            {processSteps.map((step, i) => (
               <AnimatedSection key={step.title} delay={i * 0.1}>
-                <div className="text-center">
-                  <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                <div className="text-center relative">
+                  <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center mx-auto mb-5 relative z-10 border-4 border-card">
                     <step.icon className="text-accent" size={28} />
                   </div>
-                  <span className="text-accent font-heading font-bold text-sm">Step {i + 1}</span>
-                  <h3 className="font-heading font-bold text-foreground mt-1 mb-2">{step.title}</h3>
+                  <span className="text-accent font-heading font-bold text-xs uppercase tracking-widest">
+                    Step {i + 1}
+                  </span>
+                  <h3 className="font-heading font-bold text-lg text-foreground mt-2 mb-2">{step.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{step.desc}</p>
                 </div>
               </AnimatedSection>
@@ -264,48 +319,44 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Preview */}
-      <section className="section-padding bg-background">
-        <div className="container-narrow">
+      {/* ── CTA ── */}
+      <section className="section-padding bg-primary relative overflow-hidden">
+        {/* Decorative elements */}
+        <motion.div
+          className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-accent/10 animate-float"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+        />
+        <motion.div
+          className="absolute -bottom-10 -left-10 w-48 h-48 rounded-full bg-secondary/10 animate-float-slow"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+        />
+        <div className="container-narrow text-center relative z-10">
           <AnimatedSection>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
-              About The Dunn Company
+            <Sparkles className="text-accent mx-auto mb-4" size={32} />
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-primary-foreground mb-6">
+              Let's Build Something Great
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-4">
-              The Dunn Company is a modern marketing and creative firm focused on helping businesses grow through strategic marketing, creative design, and digital communication.
+            <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+              Whether you're building a brand or growing one, we help businesses connect with their audience through powerful design and strategic marketing.
             </p>
-            <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-4">
-              Its creative studio division, The Dunn Design Company, specializes in brand design, marketing visuals, and digital content creation.
-            </p>
-            <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-8">
-              The company was founded by Melissa Dunn, a marketing professional with experience in marketing strategy, graphic design, social media management, and digital content development.
-            </p>
-            <Link
-              to="/about"
-              className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-8 py-4 rounded-lg font-heading font-semibold text-sm hover:opacity-90 transition-opacity"
-            >
-              Learn More <ArrowRight size={16} />
-            </Link>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="section-padding bg-primary">
-        <div className="container-narrow text-center">
-          <AnimatedSection>
-            <h2 className="text-3xl md:text-5xl font-heading font-bold text-primary-foreground mb-4">
-              Ready to Elevate Your Brand?
-            </h2>
-            <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto mb-8">
-              Whether you're launching a new brand, improving your marketing strategy, or developing creative content, The Dunn Design Company is ready to help bring your ideas to life.
-            </p>
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 bg-coral text-coral-foreground px-10 py-4 rounded-lg font-heading font-semibold text-sm hover:opacity-90 transition-opacity"
-            >
-              Start Your Project <ArrowRight size={16} />
-            </Link>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-10 py-4 rounded-lg font-heading font-semibold text-sm hover:brightness-110 transition-all"
+              >
+                Start a Project <ArrowRight size={16} />
+              </Link>
+              <Link
+                to="/portfolio"
+                className="inline-flex items-center gap-2 border border-primary-foreground/30 text-primary-foreground px-10 py-4 rounded-lg font-heading font-semibold text-sm hover:bg-primary-foreground/10 transition-colors"
+              >
+                View Portfolio
+              </Link>
+            </div>
           </AnimatedSection>
         </div>
       </section>
