@@ -4,50 +4,52 @@ import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import serviceStrategy from "@/assets/service-strategy.jpg";
-import serviceDesign from "@/assets/service-design.jpg";
-import serviceSocial from "@/assets/service-social.jpg";
-import serviceCollateral from "@/assets/service-collateral.jpg";
+import stockDesignStudio from "@/assets/stock-design-studio.jpg";
+import stockAdsDashboard from "@/assets/stock-ads-dashboard.jpg";
+import stockSocialAnalytics from "@/assets/stock-social-analytics.jpg";
+import stockPrintProduction from "@/assets/stock-print-production.jpg";
+import stockDigitalMarketing from "@/assets/stock-digital-marketing.jpg";
+import stockCreativeWorkspace from "@/assets/stock-creative-workspace.jpg";
 
 const services = [
   {
     icon: Palette,
-    image: serviceDesign,
+    image: stockDesignStudio,
     title: "Brand Design",
     desc: "Professional design systems including logos, brand visuals, business cards, and communication materials that strengthen brand identity.",
     deliverables: ["Logos & brand marks", "Visual identity systems", "Business cards", "Brand guidelines"],
   },
   {
     icon: Target,
-    image: serviceStrategy,
+    image: stockAdsDashboard,
     title: "Marketing Strategy",
     desc: "Strategic marketing planning that helps businesses define their message, identify their audience, and build approaches that support long-term growth.",
     deliverables: ["Marketing plans", "Campaign strategy", "Brand messaging", "Marketing consultation"],
   },
   {
     icon: Share2,
-    image: serviceSocial,
+    image: stockSocialAnalytics,
     title: "Digital Content",
     desc: "Creative social media graphics and digital content designed to increase engagement and strengthen brand presence across platforms.",
     deliverables: ["Social media graphics", "Campaign visuals", "Content templates", "Branded posts"],
   },
   {
     icon: FileText,
-    image: serviceCollateral,
+    image: stockPrintProduction,
     title: "Marketing Collateral",
     desc: "Marketing materials such as brochures, presentations, digital assets, and promotional graphics that support brand communication.",
     deliverables: ["Pitch decks", "Sell sheets", "Brochures & flyers", "Email marketing graphics"],
   },
   {
     icon: PenTool,
-    image: serviceDesign,
+    image: stockCreativeWorkspace,
     title: "Creative Campaigns",
     desc: "End-to-end campaign design from concept to execution, supporting brand visibility and audience engagement across digital and print.",
     deliverables: ["Campaign concepts", "Ad creatives", "Launch materials", "Cross-channel assets"],
   },
   {
     icon: Presentation,
-    image: serviceSocial,
+    image: stockDigitalMarketing,
     title: "Social Media Design",
     desc: "Custom social media templates and branded content designs that keep your brand consistent and engaging across every platform.",
     deliverables: ["Platform templates", "Story designs", "Carousel graphics", "Profile branding"],
@@ -59,8 +61,12 @@ const Services = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      <section className="pt-32 pb-16 section-padding bg-primary">
-        <div className="container-narrow">
+      <section className="pt-32 pb-16 section-padding bg-primary relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={stockDesignStudio} alt="" className="w-full h-full object-cover opacity-15" />
+          <div className="absolute inset-0 bg-primary/85" />
+        </div>
+        <div className="container-narrow relative z-10">
           <AnimatedSection>
             <p className="text-accent font-heading font-semibold text-sm uppercase tracking-widest mb-4">What We Do</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-primary-foreground max-w-3xl">

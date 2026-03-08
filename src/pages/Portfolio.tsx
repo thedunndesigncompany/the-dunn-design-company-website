@@ -5,37 +5,43 @@ import { ArrowRight } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import portfolio1 from "@/assets/portfolio-1.jpg";
-import portfolio2 from "@/assets/portfolio-2.jpg";
-import portfolio3 from "@/assets/portfolio-3.jpg";
-import portfolio4 from "@/assets/portfolio-4.jpg";
-import portfolio5 from "@/assets/portfolio-5.jpg";
-import portfolio6 from "@/assets/portfolio-6.jpg";
+import PortfolioGrid from "@/components/PortfolioGrid";
+import stockDesignConcept from "@/assets/stock-design-concept.jpg";
+import stockColorSwatches from "@/assets/stock-color-swatches.jpg";
+import stockCreativeWorkspace from "@/assets/stock-creative-workspace.jpg";
+import stockDigitalMarketing from "@/assets/stock-digital-marketing.jpg";
+import stockPrintProduction from "@/assets/stock-print-production.jpg";
+import stockDesignStudio from "@/assets/stock-design-studio.jpg";
+import stockSocialAnalytics from "@/assets/stock-social-analytics.jpg";
+import stockAdsDashboard from "@/assets/stock-ads-dashboard.jpg";
+import stockColorExplosion from "@/assets/stock-color-explosion.jpg";
+import stockMarketingIcons from "@/assets/stock-marketing-icons.jpg";
 
 /* ── Data ── */
 
 const graphicDesign = [
-  { image: portfolio1, title: "Tech Startup Brand Identity", type: "Logo & Brand System" },
-  { image: portfolio2, title: "Professional Services Rebrand", type: "Visual Identity" },
-  { image: portfolio5, title: "Nonprofit Visual Identity", type: "Brand Guidelines" },
-  { image: portfolio6, title: "Product Line Brand Package", type: "Business Cards & Collateral" },
+  { image: stockDesignConcept, title: "Tech Startup Brand Identity", type: "Logo & Brand System" },
+  { image: stockCreativeWorkspace, title: "Professional Services Rebrand", type: "Visual Identity" },
+  { image: stockColorSwatches, title: "Nonprofit Visual Identity", type: "Brand Guidelines" },
+  { image: stockDesignStudio, title: "Product Line Brand Package", type: "Business Cards & Collateral" },
 ];
 
 const productionDesign = [
-  { image: portfolio4, title: "Healthcare Outreach Materials", type: "Pitch Deck & Brochures" },
-  { image: portfolio3, title: "Retail Campaign Sell Sheets", type: "Sell Sheets & Presentations" },
-  { image: portfolio1, title: "Conference Speaker Kit", type: "Presentation Design" },
+  { image: stockPrintProduction, title: "Healthcare Outreach Materials", type: "Pitch Deck & Brochures" },
+  { image: stockColorExplosion, title: "Retail Campaign Sell Sheets", type: "Sell Sheets & Presentations" },
+  { image: stockDesignConcept, title: "Conference Speaker Kit", type: "Presentation Design" },
 ];
 
 const marketingContent = [
-  { image: portfolio3, title: "Retail Social Media Campaign", type: "Social Media Graphics" },
-  { image: portfolio5, title: "Nonprofit Fundraising Campaign", type: "Email Marketing Visuals" },
-  { image: portfolio6, title: "Product Launch Digital Ads", type: "Campaign Assets" },
+  { image: stockSocialAnalytics, title: "Retail Social Media Campaign", type: "Social Media Graphics" },
+  { image: stockAdsDashboard, title: "Nonprofit Fundraising Campaign", type: "Email Marketing Visuals" },
+  { image: stockDigitalMarketing, title: "Product Launch Digital Ads", type: "Campaign Assets" },
+  { image: stockMarketingIcons, title: "Digital Marketing Suite", type: "Marketing Icons & Graphics" },
 ];
 
 const caseStudies = [
   {
-    image: portfolio1,
+    image: stockDesignConcept,
     title: "Strategic Brand Launch Campaign",
     client: "Technology Startup",
     overview: "Developed a comprehensive go-to-market strategy for a technology startup entering a competitive market.",
@@ -44,7 +50,7 @@ const caseStudies = [
     results: "Successfully launched the brand with strong initial engagement and measurable audience growth within the first quarter.",
   },
   {
-    image: portfolio2,
+    image: stockCreativeWorkspace,
     title: "Corporate Identity Redesign",
     client: "Professional Services Firm",
     overview: "Complete visual identity overhaul for an established professional services firm seeking a modern refresh.",
@@ -53,7 +59,7 @@ const caseStudies = [
     results: "Delivered a cohesive brand identity that strengthened market positioning and improved client perception.",
   },
   {
-    image: portfolio3,
+    image: stockSocialAnalytics,
     title: "Social Media Engagement Campaign",
     client: "Retail Brand",
     overview: "Multi-platform social media strategy and content creation for a growing retail brand.",
@@ -62,35 +68,6 @@ const caseStudies = [
     results: "Significantly improved engagement rates and follower growth across all platforms.",
   },
 ];
-
-/* ── Portfolio Grid Component ── */
-
-const PortfolioGrid = ({ items }: { items: { image: string; title: string; type: string }[] }) => (
-  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    {items.map((item, i) => (
-      <AnimatedSection key={item.title + i} delay={i * 0.06}>
-        <motion.div
-          whileHover={{ y: -6 }}
-          className="group bg-card rounded-2xl overflow-hidden border border-border hover:shadow-xl transition-all duration-300"
-        >
-          <div className="aspect-[4/3] overflow-hidden">
-            <img
-              src={item.image}
-              alt={item.title}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-          </div>
-          <div className="p-5">
-            <span className="text-secondary text-xs font-heading font-semibold uppercase tracking-wider">
-              {item.type}
-            </span>
-            <h3 className="font-heading font-bold text-foreground mt-1">{item.title}</h3>
-          </div>
-        </motion.div>
-      </AnimatedSection>
-    ))}
-  </div>
-);
 
 /* ── Main Page ── */
 
@@ -102,8 +79,12 @@ const Portfolio = () => {
       <Header />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 section-padding bg-primary">
-        <div className="container-narrow">
+      <section className="pt-32 pb-16 section-padding bg-primary relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={stockColorExplosion} alt="" className="w-full h-full object-cover opacity-10" />
+          <div className="absolute inset-0 bg-primary/85" />
+        </div>
+        <div className="container-narrow relative z-10">
           <AnimatedSection>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-primary-foreground max-w-4xl">
               Portfolio
@@ -220,7 +201,7 @@ const Portfolio = () => {
                         )}
                       </AnimatePresence>
 
-                      <span className="inline-flex items-center gap-1 text-secondary text-sm font-heading font-semibold mt-4 group-hover:gap-2 transition-all">
+                      <span className="inline-flex items-center gap-1 text-secondary text-sm font-heading font-semibold mt-4">
                         {expandedStudy === i ? "Close" : "View Case Study"} <ArrowRight size={14} />
                       </span>
                     </div>
