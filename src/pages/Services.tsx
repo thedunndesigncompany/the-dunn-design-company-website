@@ -7,11 +7,13 @@ import Footer from "@/components/Footer";
 import {
   BrandDesignIcon,
   MarketingStrategyIcon,
+  AISystemsIcon,
   DigitalContentIcon,
   CollateralIcon,
   CampaignIcon,
   SocialDesignIcon,
 } from "@/components/icons/ServiceIcons";
+import serviceAISystems from "@/assets/service-ai-systems.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
 import serviceBrandDesign from "@/assets/service-brand-design.jpg";
 import serviceMarketingStrategy from "@/assets/service-marketing-strategy.jpg";
@@ -35,6 +37,13 @@ const services = [
     title: "Marketing Strategy",
     desc: "Strategic marketing planning that helps businesses define their message, identify their audience, and build approaches that support long-term growth.",
     deliverables: ["Marketing plans", "Campaign strategy", "Brand messaging", "Marketing consultation"],
+  },
+  {
+    Icon: AISystemsIcon,
+    image: serviceAISystems,
+    title: "AI & Digital Marketing Systems",
+    desc: "Modern businesses are increasingly using artificial intelligence to improve efficiency, streamline workflows, and strengthen their marketing capabilities. The Dunn Company helps businesses explore practical ways to integrate AI tools into their marketing, content creation, and operational processes.",
+    deliverables: ["AI-assisted content workflows", "Marketing automation systems", "AI research & insight tools", "Content generation systems", "Workflow optimization"],
   },
   {
     Icon: DigitalContentIcon,
