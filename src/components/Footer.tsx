@@ -8,6 +8,9 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-12">
           <div>
             <h3 className="text-lg font-heading font-bold mb-1">The Dunn Company</h3>
+            <p className="text-primary-foreground/50 text-xs font-heading mb-1">
+              Strategic Marketing & Brand Growth
+            </p>
             <p className="text-primary-foreground/50 text-xs font-heading mb-3">
               Creative Studio: The Dunn Design Company
             </p>
