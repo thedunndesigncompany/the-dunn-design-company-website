@@ -9,51 +9,50 @@ import serviceStrategy from "@/assets/service-strategy.jpg";
 import serviceDesign from "@/assets/service-design.jpg";
 import serviceSocial from "@/assets/service-social.jpg";
 import serviceCollateral from "@/assets/service-collateral.jpg";
+import portfolio1 from "@/assets/portfolio-1.jpg";
+import portfolio2 from "@/assets/portfolio-2.jpg";
+import portfolio3 from "@/assets/portfolio-3.jpg";
+import portfolio4 from "@/assets/portfolio-4.jpg";
 
 const services = [
   {
     image: serviceStrategy,
     icon: Target,
     title: "Marketing Strategy",
-    desc: "Strategic marketing guidance that helps brands define their message, identify their audience, and build marketing approaches that support long-term growth.",
-    deliverables: ["Marketing plans", "Campaign strategy", "Brand messaging", "Marketing consultation"],
+    desc: "Strategic marketing planning that helps businesses define their message, identify their audience, and build marketing approaches that support long-term growth.",
   },
   {
     image: serviceDesign,
     icon: Palette,
     title: "Brand & Graphic Design",
-    desc: "Professional visual design that strengthens brand identity and improves communication through cohesive visual systems and marketing materials.",
-    deliverables: ["Logos", "Marketing materials", "Brand graphics", "Print and digital design"],
+    desc: "Professional design systems including brand visuals, marketing graphics, and communication materials that strengthen brand identity.",
   },
   {
     image: serviceSocial,
     icon: Share2,
-    title: "Social Media Content & Campaigns",
-    desc: "Creative social media content designed to help brands build stronger connections with their audiences and increase engagement across platforms.",
-    deliverables: ["Social media graphics", "Campaign visuals", "Content templates", "Branded posts"],
+    title: "Social Media Content",
+    desc: "Creative social media graphics and digital content designed to increase engagement and strengthen brand presence across platforms.",
   },
   {
     image: serviceCollateral,
     icon: FileText,
-    title: "Marketing Collateral & Digital Assets",
-    desc: "Polished marketing materials that support presentations, promotions, advertising, and digital marketing campaigns.",
-    deliverables: ["Pitch decks", "Brochures", "Flyers", "Email marketing graphics"],
+    title: "Marketing Collateral",
+    desc: "Marketing materials such as brochures, presentations, digital assets, and promotional graphics that support brand communication.",
   },
 ];
 
-const steps = [
-  { icon: MessageSquare, title: "Discovery", desc: "We start with a conversation to understand your business, goals, and marketing challenges." },
-  { icon: Lightbulb, title: "Strategy", desc: "A marketing and design strategy is developed to support your brand and business objectives." },
-  { icon: Rocket, title: "Design & Execution", desc: "Creative ideas are transformed into professional marketing materials and visual assets." },
-  { icon: TrendingUp, title: "Growth & Optimization", desc: "Marketing assets are designed to support engagement, brand growth, and long-term visibility." },
+const featuredWork = [
+  { image: portfolio1, title: "Brand Identity Design", category: "Brand & Graphic Design" },
+  { image: portfolio2, title: "Social Media Campaign Graphics", category: "Social Media" },
+  { image: portfolio3, title: "Marketing Case Study Layout", category: "Marketing Strategy" },
+  { image: portfolio4, title: "Digital Marketing Graphics", category: "Marketing Collateral" },
 ];
 
-const trustPoints = [
-  "Marketing Strategy",
-  "Brand Design",
-  "Social Media Content",
-  "Digital Marketing Assets",
-  "Graphic Design for Print & Web",
+const steps = [
+  { icon: MessageSquare, title: "Discovery", desc: "Understanding the client's business, audience, and goals." },
+  { icon: Lightbulb, title: "Strategy", desc: "Developing a clear marketing and design direction." },
+  { icon: Rocket, title: "Design", desc: "Creating professional marketing visuals and digital assets." },
+  { icon: TrendingUp, title: "Growth", desc: "Supporting brand communication and long-term engagement." },
 ];
 
 const Index = () => {
@@ -65,9 +64,17 @@ const Index = () => {
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img src={heroCreative} alt="" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-primary/75" />
+          <div className="absolute inset-0 bg-primary/80" />
         </div>
         <div className="relative z-10 container-narrow px-6 pt-20">
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-accent font-heading font-bold text-lg md:text-xl mb-4"
+          >
+            The Dunn Company
+          </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -90,16 +97,21 @@ const Index = () => {
             transition={{ duration: 0.6, delay: 0.8 }}
             className="text-primary-foreground/60 text-base max-w-2xl mt-4 leading-relaxed"
           >
-            The Dunn Design Company helps businesses elevate their brands through thoughtful design, strategic marketing, and engaging digital content that connects with audiences and drives meaningful results.
+            The Dunn Company helps businesses strengthen their brands through strategic marketing, creative design, and modern digital communication.
           </motion.p>
-          <motion.p
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.9 }}
-            className="text-secondary font-heading font-medium text-sm mt-6"
+            className="mt-4"
           >
-            Founded by Melissa Dunn
-          </motion.p>
+            <p className="text-sky font-heading font-medium text-sm">
+              Creative Studio: The Dunn Design Company
+            </p>
+            <p className="text-primary-foreground/50 font-heading text-xs mt-1">
+              Founded by Melissa Dunn
+            </p>
+          </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -116,34 +128,26 @@ const Index = () => {
               to="/contact"
               className="inline-flex items-center gap-2 border border-primary-foreground/30 text-primary-foreground px-8 py-4 rounded-lg font-heading font-semibold text-sm hover:bg-primary-foreground/10 transition-colors"
             >
-              Work With Me
+              Start a Project
             </Link>
           </motion.div>
         </div>
       </section>
 
-      {/* Trust Section */}
+      {/* Introduction */}
       <section className="section-padding bg-background">
         <div className="container-narrow">
           <AnimatedSection>
+            <p className="text-accent font-heading font-semibold text-sm uppercase tracking-widest mb-4">Creative Division</p>
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
-              Strategic Creativity for Modern Brands
+              Creative Studio: The Dunn Design Company
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-8">
-              Modern brands need more than just attractive visuals. They need strategy, clarity, and creative marketing that works. The Dunn Design Company combines marketing insight with professional design to create work that communicates clearly, strengthens brand identity, and supports business growth.
+            <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-4">
+              The Dunn Design Company is the creative studio division of The Dunn Company. It focuses on brand design, marketing visuals, and digital content that help businesses communicate clearly and connect with their audiences.
             </p>
-          </AnimatedSection>
-          <AnimatedSection delay={0.1}>
-            <div className="flex flex-wrap gap-3">
-              {trustPoints.map((point) => (
-                <span
-                  key={point}
-                  className="px-5 py-2.5 bg-secondary/50 rounded-full text-foreground font-heading font-medium text-sm border border-border"
-                >
-                  {point}
-                </span>
-              ))}
-            </div>
+            <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl">
+              The studio blends marketing strategy with creative design to produce work that is visually compelling, strategically thoughtful, and built for modern digital communication.
+            </p>
           </AnimatedSection>
         </div>
       </section>
@@ -152,9 +156,9 @@ const Index = () => {
       <section className="section-padding bg-muted/50">
         <div className="container-narrow">
           <AnimatedSection>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4 text-center">Services</h2>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4 text-center">Creative Services</h2>
             <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
-              Comprehensive creative and marketing solutions for businesses ready to grow.
+              Strategic marketing and design solutions for modern brands.
             </p>
           </AnimatedSection>
           <div className="grid md:grid-cols-2 gap-8">
@@ -170,14 +174,7 @@ const Index = () => {
                   <div className="p-8">
                     <service.icon className="text-accent mb-3" size={28} />
                     <h3 className="font-heading font-bold text-lg text-foreground mb-2">{service.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">{service.desc}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {service.deliverables.map((d) => (
-                        <span key={d} className="text-xs px-3 py-1 bg-muted rounded-full text-muted-foreground">
-                          {d}
-                        </span>
-                      ))}
-                    </div>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{service.desc}</p>
                   </div>
                 </motion.div>
               </AnimatedSection>
@@ -187,7 +184,7 @@ const Index = () => {
             <div className="text-center mt-12">
               <Link
                 to="/services"
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-heading font-semibold text-sm hover:opacity-90 transition-opacity"
+                className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-8 py-4 rounded-lg font-heading font-semibold text-sm hover:opacity-90 transition-opacity"
               >
                 View All Services <ArrowRight size={16} />
               </Link>
@@ -196,12 +193,58 @@ const Index = () => {
         </div>
       </section>
 
-      {/* How We Work */}
+      {/* Selected Work */}
       <section className="section-padding bg-background">
         <div className="container-narrow">
           <AnimatedSection>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4 text-center">Selected Work</h2>
+            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
+              A curated selection of creative marketing and design projects.
+            </p>
+          </AnimatedSection>
+          <div className="grid sm:grid-cols-2 gap-8">
+            {featuredWork.map((project, i) => (
+              <AnimatedSection key={project.title} delay={i * 0.1}>
+                <motion.div
+                  whileHover={{ y: -6 }}
+                  className="group bg-card rounded-xl overflow-hidden border border-border hover:shadow-xl transition-all duration-300"
+                >
+                  <div className="aspect-[16/10] overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <span className="text-accent text-xs font-heading font-semibold uppercase tracking-wider">
+                      {project.category}
+                    </span>
+                    <h3 className="font-heading font-bold text-lg text-foreground mt-1">{project.title}</h3>
+                  </div>
+                </motion.div>
+              </AnimatedSection>
+            ))}
+          </div>
+          <AnimatedSection>
+            <div className="text-center mt-12">
+              <Link
+                to="/portfolio"
+                className="inline-flex items-center gap-2 bg-coral text-coral-foreground px-8 py-4 rounded-lg font-heading font-semibold text-sm hover:opacity-90 transition-opacity"
+              >
+                View Full Portfolio <ArrowRight size={16} />
+              </Link>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Our Process */}
+      <section className="section-padding bg-muted/50">
+        <div className="container-narrow">
+          <AnimatedSection>
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-12 text-center">
-              How We Work
+              Our Process
             </h2>
           </AnimatedSection>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -218,15 +261,31 @@ const Index = () => {
               </AnimatedSection>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* About Preview */}
+      <section className="section-padding bg-background">
+        <div className="container-narrow">
           <AnimatedSection>
-            <div className="text-center mt-12">
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 bg-coral text-coral-foreground px-8 py-4 rounded-lg font-heading font-semibold text-sm hover:opacity-90 transition-opacity"
-              >
-                Start Your Project <ArrowRight size={16} />
-              </Link>
-            </div>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
+              About The Dunn Company
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-4">
+              The Dunn Company is a modern marketing and creative firm focused on helping businesses grow through strategic marketing, creative design, and digital communication.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-4">
+              Its creative studio division, The Dunn Design Company, specializes in brand design, marketing visuals, and digital content creation.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-8">
+              The company was founded by Melissa Dunn, a marketing professional with experience in marketing strategy, graphic design, social media management, and digital content development.
+            </p>
+            <Link
+              to="/about"
+              className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-8 py-4 rounded-lg font-heading font-semibold text-sm hover:opacity-90 transition-opacity"
+            >
+              Learn More <ArrowRight size={16} />
+            </Link>
           </AnimatedSection>
         </div>
       </section>
@@ -239,13 +298,13 @@ const Index = () => {
               Ready to Elevate Your Brand?
             </h2>
             <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto mb-8">
-              Whether you're building a new brand, refining your marketing strategy, or looking for creative support, The Dunn Design Company is ready to help bring your ideas to life.
+              Whether you're launching a new brand, improving your marketing strategy, or developing creative content, The Dunn Design Company is ready to help bring your ideas to life.
             </p>
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 bg-coral text-coral-foreground px-10 py-4 rounded-lg font-heading font-semibold text-sm hover:opacity-90 transition-opacity"
             >
-              Work With Me <ArrowRight size={16} />
+              Start Your Project <ArrowRight size={16} />
             </Link>
           </AnimatedSection>
         </div>

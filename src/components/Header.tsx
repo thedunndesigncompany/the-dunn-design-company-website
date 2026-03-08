@@ -18,8 +18,13 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
       <div className="container-narrow flex items-center justify-between h-16 md:h-20 px-6">
-        <Link to="/" className="font-heading font-bold text-lg md:text-xl text-primary tracking-tight">
-          The Dunn Design Company
+        <Link to="/" className="flex flex-col">
+          <span className="font-heading font-bold text-lg md:text-xl text-primary tracking-tight leading-tight">
+            The Dunn Company
+          </span>
+          <span className="text-[10px] md:text-xs text-muted-foreground font-heading font-medium tracking-wide leading-tight">
+            Creative Studio: The Dunn Design Company
+          </span>
         </Link>
 
         {/* Desktop nav */}

@@ -62,7 +62,7 @@ const Contact = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-heading font-medium text-foreground mb-2">Company Name</label>
+                    <label className="block text-sm font-heading font-medium text-foreground mb-2">Company</label>
                     <input
                       type="text"
                       maxLength={100}
@@ -82,8 +82,8 @@ const Contact = () => {
                       <option value="">Select a project type</option>
                       <option value="strategy">Marketing Strategy</option>
                       <option value="design">Brand & Graphic Design</option>
-                      <option value="social">Social Media Content & Campaigns</option>
-                      <option value="collateral">Marketing Collateral & Digital Assets</option>
+                      <option value="social">Social Media Content</option>
+                      <option value="collateral">Marketing Collateral</option>
                       <option value="other">Other</option>
                     </select>
                   </div>
@@ -143,7 +143,7 @@ const Contact = () => {
                     <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                       Want to discuss your project in more detail? Book a free consultation to explore how we can work together.
                     </p>
-                    <button className="inline-flex items-center gap-2 border border-primary text-primary px-6 py-3 rounded-lg font-heading font-semibold text-sm hover:bg-primary hover:text-primary-foreground transition-colors">
+                    <button className="inline-flex items-center gap-2 border border-accent text-accent px-6 py-3 rounded-lg font-heading font-semibold text-sm hover:bg-accent hover:text-accent-foreground transition-colors">
                       Book a Call
                     </button>
                   </div>

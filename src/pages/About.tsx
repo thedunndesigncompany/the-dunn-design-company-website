@@ -15,7 +15,7 @@ const About = () => {
           <AnimatedSection>
             <p className="text-accent font-heading font-semibold text-sm uppercase tracking-widest mb-4">About</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-primary-foreground max-w-3xl">
-              About The Dunn Design Company
+              About The Dunn Company
             </h1>
           </AnimatedSection>
         </div>
@@ -28,7 +28,7 @@ const About = () => {
               <div className="rounded-xl overflow-hidden bg-muted aspect-[4/5]">
                 <img
                   src={aboutPortrait}
-                  alt="Melissa Dunn — Founder of The Dunn Design Company"
+                  alt="Melissa Dunn — Founder of The Dunn Company"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -39,16 +39,19 @@ const About = () => {
                 <h2 className="text-3xl font-heading font-bold text-foreground mb-6">Meet Melissa</h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    The Dunn Design Company was founded by Melissa Dunn, a creative marketing professional with a multidisciplinary background in marketing, graphic design, social media strategy, and digital content development.
+                    The Dunn Company is a modern marketing and creative firm focused on helping businesses grow through strategic marketing, creative design, and digital communication.
                   </p>
                   <p>
-                    Melissa combines creative thinking with strategic marketing insight to help businesses develop stronger brands, communicate their message clearly, and connect with their audiences in meaningful ways.
+                    Its creative studio division, The Dunn Design Company, specializes in brand design, marketing visuals, and digital content creation.
                   </p>
                   <p>
-                    Through The Dunn Design Company, Melissa partners with businesses, entrepreneurs, and organizations to create marketing and design solutions that support long-term growth and stronger brand engagement.
+                    The company was founded by Melissa Dunn, a marketing professional with experience in marketing strategy, graphic design, social media management, and digital content development.
                   </p>
                   <p>
-                    Based in Columbia, Maryland — conveniently located between Washington DC and Baltimore — The Dunn Design Company works with clients locally and remotely worldwide.
+                    Melissa combines creative thinking with strategic marketing insight to build brands that communicate clearly and connect with audiences.
+                  </p>
+                  <p>
+                    Based in Columbia, Maryland — conveniently located between Washington DC and Baltimore — The Dunn Company works with clients locally and remotely worldwide.
                   </p>
                 </div>
                 <Link
@@ -71,13 +74,13 @@ const About = () => {
               Ready to Elevate Your Brand?
             </h2>
             <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto mb-8">
-              Whether you're building a new brand, refining your marketing strategy, or looking for creative support, The Dunn Design Company is ready to help bring your ideas to life.
+              Whether you're launching a new brand, improving your marketing strategy, or developing creative content, The Dunn Design Company is ready to help bring your ideas to life.
             </p>
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 bg-coral text-coral-foreground px-10 py-4 rounded-lg font-heading font-semibold text-sm hover:opacity-90 transition-opacity"
             >
-              Work With Me <ArrowRight size={16} />
+              Start Your Project <ArrowRight size={16} />
             </Link>
           </AnimatedSection>
         </div>

@@ -47,6 +47,10 @@ export default {
           DEFAULT: "hsl(var(--coral))",
           foreground: "hsl(var(--coral-foreground))",
         },
+        sky: {
+          DEFAULT: "hsl(var(--sky))",
+          foreground: "hsl(var(--sky-foreground))",
+        },
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",

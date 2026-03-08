@@ -14,28 +14,28 @@ const services = [
     icon: Target,
     image: serviceStrategy,
     title: "Marketing Strategy",
-    desc: "Strategic marketing guidance that helps brands define their message, identify their audience, and build marketing approaches that support long-term growth.",
+    desc: "Strategic marketing planning that helps businesses define their message, identify their audience, and build marketing approaches that support long-term growth.",
     deliverables: ["Marketing plans", "Campaign strategy", "Brand messaging", "Marketing consultation"],
   },
   {
     icon: Palette,
     image: serviceDesign,
     title: "Brand & Graphic Design",
-    desc: "Professional visual design that strengthens brand identity and improves communication through cohesive visual systems and marketing materials.",
+    desc: "Professional design systems including brand visuals, marketing graphics, and communication materials that strengthen brand identity.",
     deliverables: ["Logos", "Marketing materials", "Brand graphics", "Print and digital design"],
   },
   {
     icon: Share2,
     image: serviceSocial,
-    title: "Social Media Content & Campaigns",
-    desc: "Creative social media content designed to help brands build stronger connections with their audiences and increase engagement across platforms.",
+    title: "Social Media Content",
+    desc: "Creative social media graphics and digital content designed to increase engagement and strengthen brand presence across platforms.",
     deliverables: ["Social media graphics", "Campaign visuals", "Content templates", "Branded posts"],
   },
   {
     icon: FileText,
     image: serviceCollateral,
-    title: "Marketing Collateral & Digital Assets",
-    desc: "Polished marketing materials that support presentations, promotions, advertising, and digital marketing campaigns.",
+    title: "Marketing Collateral",
+    desc: "Marketing materials such as brochures, presentations, digital assets, and promotional graphics that support brand communication.",
     deliverables: ["Pitch decks", "Brochures", "Flyers", "Email marketing graphics", "Promotional materials"],
   },
 ];
@@ -45,22 +45,20 @@ const Services = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero */}
       <section className="pt-32 pb-16 section-padding bg-primary">
         <div className="container-narrow">
           <AnimatedSection>
             <p className="text-accent font-heading font-semibold text-sm uppercase tracking-widest mb-4">What We Do</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-primary-foreground max-w-3xl">
-              Services
+              Creative Services
             </h1>
             <p className="text-primary-foreground/70 text-lg mt-4 max-w-2xl">
-              Comprehensive creative and marketing solutions tailored to help your brand communicate clearly and grow confidently.
+              Strategic marketing and design solutions tailored to help your brand communicate clearly and grow confidently.
             </p>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* Services */}
       <section className="section-padding bg-background">
         <div className="container-narrow space-y-16">
           {services.map((service, i) => (
@@ -91,7 +89,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="section-padding bg-primary">
         <div className="container-narrow text-center">
           <AnimatedSection>

@@ -6,36 +6,39 @@
 
 @layer base {
   :root {
-    --background: 40 33% 98%;
-    --foreground: 0 0% 13%;
+    --background: 0 0% 96%;
+    --foreground: 210 50% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 13%;
+    --card-foreground: 210 50% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 13%;
+    --popover-foreground: 210 50% 11%;
 
-    --primary: 224 42% 28%;
-    --primary-foreground: 40 33% 98%;
+    --primary: 210 50% 11%;
+    --primary-foreground: 0 0% 96%;
 
-    --secondary: 24 38% 85%;
-    --secondary-foreground: 0 0% 13%;
+    --secondary: 30 20% 93%;
+    --secondary-foreground: 210 50% 11%;
 
-    --muted: 24 20% 92%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 210 10% 92%;
+    --muted-foreground: 210 10% 40%;
 
-    --accent: 178 51% 37%;
+    --accent: 214 100% 58%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 7 87% 60%;
+    --destructive: 4 80% 57%;
     --destructive-foreground: 0 0% 100%;
 
-    --coral: 7 87% 60%;
+    --coral: 4 100% 63%;
     --coral-foreground: 0 0% 100%;
 
-    --border: 24 20% 88%;
-    --input: 24 20% 88%;
-    --ring: 224 42% 28%;
+    --sky: 199 92% 74%;
+    --sky-foreground: 210 50% 11%;
+
+    --border: 210 10% 88%;
+    --input: 210 10% 88%;
+    --ring: 214 100% 58%;
 
     --radius: 0.5rem;
 
@@ -66,7 +69,7 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent via-sky to-accent;
   }
 
   .section-padding {
