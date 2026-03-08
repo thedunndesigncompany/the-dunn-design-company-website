@@ -165,7 +165,7 @@ export const CollateralIcon = ({ className = "", size = 24 }: { className?: stri
     <line x1="6" y1="19" x2="15" y2="21" stroke="currentColor" strokeWidth="1.5" opacity="0.25" />
     <line x1="6" y1="23" x2="17" y2="25" stroke="currentColor" strokeWidth="1.5" opacity="0.2" />
     {/* Image block right page */}
-    <rect x="23" y="14" width="10" height="7" rx="1" fill="currentColor" opacity="0.1" stroke="currentColor" strokeWidth="1" opacity="0.3" />
+    <rect x="23" y="14" width="10" height="7" rx="1" fill="currentColor" opacity="0.1" stroke="currentColor" strokeWidth="1" />
     <line x1="23" y1="25" x2="33" y2="24" stroke="currentColor" strokeWidth="1.5" opacity="0.25" />
     <line x1="23" y1="29" x2="30" y2="28" stroke="currentColor" strokeWidth="1.5" opacity="0.2" />
     {/* Spine */}
