@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import heroWorkspace from "@/assets/hero-workspace.jpg";
+import heroBg from "@/assets/hero-bg.jpg";
 import serviceBrandDesign from "@/assets/service-brand-design.jpg";
 import serviceMarketingStrategy from "@/assets/service-marketing-strategy.jpg";
 import serviceDigitalContent from "@/assets/service-digital-content.jpg";
@@ -65,7 +65,7 @@ const Services = () => {
 
       <section className="pt-32 pb-16 section-padding bg-primary relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroWorkspace} alt="" className="w-full h-full object-cover opacity-30" />
+          <img src={heroBg} alt="" className="w-full h-full object-cover opacity-30" />
           <div className="absolute inset-0 bg-primary/70" />
         </div>
         <div className="container-narrow relative z-10">

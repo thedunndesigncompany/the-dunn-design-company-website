@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import agencyBrightWorkspace from "@/assets/agency-bright-workspace.jpg";
+import contactHero from "@/assets/contact-hero.jpg";
 
 const projectTypes = [
   "Brand Identity / Logo Design",
@@ -71,7 +71,7 @@ const Contact = () => {
 
       <section className="pt-32 pb-16 section-padding bg-primary relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={agencyBrightWorkspace} alt="" className="w-full h-full object-cover opacity-25" />
+          <img src={contactHero} alt="" className="w-full h-full object-cover opacity-25" />
           <div className="absolute inset-0 bg-primary/75" />
         </div>
         <div className="container-narrow relative z-10">

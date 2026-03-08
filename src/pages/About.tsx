@@ -21,7 +21,9 @@ const About = () => {
           <AnimatedSection>
             <p className="text-accent font-heading font-semibold text-sm uppercase tracking-widest mb-4">About</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-primary-foreground max-w-3xl">
-              About The Dunn Company
+              About
+              <br />
+              <span className="text-accent">The Dunn Company</span>
             </h1>
           </AnimatedSection>
         </div>

@@ -4,7 +4,7 @@ import { ArrowRight, Palette, Presentation, Target, MessageSquare, Lightbulb, Ro
 import AnimatedSection from "@/components/AnimatedSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import heroWorkspace from "@/assets/hero-workspace.jpg";
+import heroBg from "@/assets/hero-bg.jpg";
 import homeGraphicDesign from "@/assets/home-graphic-design.jpg";
 import homeProductionDesign from "@/assets/home-production-design.jpg";
 import homeStrategy from "@/assets/home-strategy.jpg";
@@ -62,7 +62,7 @@ const Index = () => {
       {/* ── Hero ── */}
       <section className="relative min-h-screen flex items-center overflow-hidden bg-primary">
         <div className="absolute inset-0">
-          <img src={heroWorkspace} alt="" className="w-full h-full object-cover opacity-40" />
+          <img src={heroBg} alt="" className="w-full h-full object-cover opacity-40" />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/75 via-primary/50 to-primary/30" />
         </div>
 
