@@ -173,11 +173,15 @@ const Index = () => {
             {whatWeDo.map((item, i) => (
               <AnimatedSection key={item.title} delay={i * 0.1}>
                 <motion.div
+                  onClick={() => setSelectedService(item)}
                   whileHover={{ y: -8, boxShadow: "0 20px 40px -12px rgba(0,0,0,0.12)" }}
-                  className="bg-background rounded-2xl overflow-hidden border border-border hover:border-secondary/30 transition-all duration-300 h-full"
+                  className="bg-background rounded-2xl overflow-hidden border border-border hover:border-secondary/30 transition-all duration-300 h-full cursor-pointer group"
                 >
-                  <div className="aspect-[16/10] overflow-hidden">
-                    <img src={item.image} alt={item.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                  <div className="aspect-[16/10] overflow-hidden relative">
+                    <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-center justify-center">
+                      <span className="bg-background/90 text-foreground px-4 py-2 rounded-lg font-heading font-semibold text-sm backdrop-blur-sm shadow-xl">View Details</span>
+                    </div>
+                    <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   <div className="p-6 text-center">
                     <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mx-auto mb-4">
@@ -190,6 +194,49 @@ const Index = () => {
               </AnimatedSection>
             ))}
           </div>
+
+          <Dialog open={!!selectedService} onOpenChange={(open) => !open && setSelectedService(null)}>
+            <DialogContent className="sm:max-w-[600px] p-0 overflow-hidden bg-card border-border">
+              {selectedService && (
+                <>
+                  <div className="aspect-[21/9] w-full relative">
+                    <img src={selectedService.image} alt={selectedService.title} className="w-full h-full object-cover" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
+                  </div>
+                  <div className="p-8 pt-0 relative -mt-12">
+                    <div className="w-16 h-16 rounded-xl bg-background border border-border flex items-center justify-center mb-6 shadow-lg relative z-10">
+                      <selectedService.Icon className="text-secondary" size={32} />
+                    </div>
+                    <DialogHeader>
+                      <DialogTitle className="text-3xl font-heading font-bold mb-4 text-foreground">{selectedService.title}</DialogTitle>
+                      <DialogDescription className="text-base text-muted-foreground leading-relaxed mb-6">
+                        {selectedService.details}
+                      </DialogDescription>
+                    </DialogHeader>
+                    <div>
+                      <h4 className="font-heading font-semibold text-foreground mb-4 uppercase tracking-wider text-sm">Key Deliverables</h4>
+                      <ul className="grid sm:grid-cols-2 gap-3">
+                        {selectedService.deliverables.map((deliverable, i) => (
+                          <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
+                            <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                            {deliverable}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="mt-8 pt-6 border-t border-border">
+                      <Link
+                        to="/services"
+                        className="inline-flex items-center gap-2 text-accent font-heading font-semibold text-sm hover:brightness-110 transition-all"
+                      >
+                        View All Services <ArrowRight size={16} />
+                      </Link>
+                    </div>
+                  </div>
+                </>
+              )}
+            </DialogContent>
+          </Dialog>
         </div>
       </section>
 
