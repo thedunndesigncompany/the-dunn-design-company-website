@@ -4,46 +4,45 @@ import { ArrowRight, Palette, Presentation, Target, MessageSquare, Lightbulb, Ro
 import AnimatedSection from "@/components/AnimatedSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import agencyBrandDesign from "@/assets/agency-brand-design.jpg";
-import agencyPrintCollateral from "@/assets/agency-print-collateral.jpg";
-import agencyStrategyRoom from "@/assets/agency-strategy-room.jpg";
-import agencyDigitalWorkspace from "@/assets/agency-digital-workspace.jpg";
-import agencyBrandIdentity from "@/assets/agency-brand-identity.jpg";
-import agencySocialContent from "@/assets/agency-social-content.jpg";
-import agencyCampaignPlanning from "@/assets/agency-campaign-planning.jpg";
-import agencyProductionStudio from "@/assets/agency-production-studio.jpg";
-import agencyDigitalAnalytics from "@/assets/agency-digital-analytics.jpg";
-import agencyEmailMarketing from "@/assets/agency-email-marketing.jpg";
+import agencyMacbookWork from "@/assets/agency-macbook-work.jpg";
+import agencyCreativeDirection from "@/assets/agency-creative-direction.jpg";
+import agencyBrightWorkspace from "@/assets/agency-bright-workspace.jpg";
+import agencyMarketingFlatlay from "@/assets/agency-marketing-flatlay.jpg";
+import agencyPrintProduction from "@/assets/agency-print-production.jpg";
+import agencySocialBright from "@/assets/agency-social-bright.jpg";
+import agencyStrategyBright from "@/assets/agency-strategy-bright.jpg";
+import agencyDigitalBright from "@/assets/agency-digital-bright.jpg";
+import agencyBrandingMaterials from "@/assets/agency-branding-materials.jpg";
 import melissaDunn from "@/assets/melissa-dunn-cropped.jpg";
 
 const whatWeDo = [
   {
     icon: Palette,
-    image: agencyBrandDesign,
+    image: agencyMacbookWork,
     title: "Graphic Design",
     desc: "Logos, brand identity, business cards, marketing materials.",
   },
   {
     icon: Presentation,
-    image: agencyPrintCollateral,
+    image: agencyPrintProduction,
     title: "Production Design",
     desc: "Pitch decks, sell sheets, presentations, printed assets.",
   },
   {
     icon: Target,
-    image: agencyStrategyRoom,
+    image: agencyStrategyBright,
     title: "Marketing & Creative Strategy",
     desc: "Campaign concepts, brand positioning, digital marketing.",
   },
 ];
 
 const featuredWork = [
-  { image: agencyBrandIdentity, title: "Brand Identity Systems", label: "Brand & Visual Design" },
-  { image: agencyProductionStudio, title: "Print & Production Design", label: "Graphic Design" },
-  { image: agencySocialContent, title: "Social Media Campaigns", label: "Digital Marketing" },
-  { image: agencyDigitalAnalytics, title: "Digital Strategy", label: "Strategy & Analytics" },
-  { image: agencyCampaignPlanning, title: "Creative Campaigns", label: "Creative Direction" },
-  { image: agencyEmailMarketing, title: "Email & Digital Content", label: "Digital Design" },
+  { image: agencyMacbookWork, title: "Brand Identity Systems", label: "Graphic Design" },
+  { image: agencyPrintProduction, title: "Print & Production Design", label: "Production Design" },
+  { image: agencySocialBright, title: "Social Media Campaigns", label: "Digital Marketing" },
+  { image: agencyStrategyBright, title: "Strategic Marketing", label: "Strategy & Analytics" },
+  { image: agencyCreativeDirection, title: "Creative Direction", label: "Creative Direction" },
+  { image: agencyDigitalBright, title: "Email & Digital Content", label: "Digital Design" },
 ];
 
 const processSteps = [
@@ -61,23 +60,8 @@ const Index = () => {
       {/* ── Hero ── */}
       <section className="relative min-h-screen flex items-center overflow-hidden bg-primary">
         <div className="absolute inset-0">
-          <img src={agencyDigitalWorkspace} alt="" className="w-full h-full object-cover opacity-25" />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/60 to-transparent" />
-        </div>
-
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <motion.div
-            className="absolute -top-20 -right-20 w-[500px] h-[500px] rounded-full border border-accent/20"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.5 }}
-          />
-          <motion.div
-            className="absolute bottom-20 right-[10%] w-64 h-64 rounded-full bg-accent/10 animate-float-slow"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.4 }}
-          />
+          <img src={agencyBrightWorkspace} alt="" className="w-full h-full object-cover opacity-40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/75 via-primary/50 to-primary/30" />
         </div>
 
         <div className="relative z-10 container-narrow px-6 pt-24 pb-12">
@@ -168,7 +152,7 @@ const Index = () => {
             {whatWeDo.map((item, i) => (
               <AnimatedSection key={item.title} delay={i * 0.1}>
                 <motion.div
-                  whileHover={{ y: -8, boxShadow: "0 20px 40px -12px rgba(0,0,0,0.15)" }}
+                  whileHover={{ y: -8, boxShadow: "0 20px 40px -12px rgba(0,0,0,0.12)" }}
                   className="bg-background rounded-2xl overflow-hidden border border-border hover:border-secondary/30 transition-all duration-300 h-full"
                 >
                   <div className="aspect-[16/10] overflow-hidden">
@@ -243,11 +227,11 @@ const Index = () => {
         <div className="container-narrow">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <AnimatedSection>
-              <div className="rounded-2xl overflow-hidden aspect-[3/4] max-w-md mx-auto relative">
+              <div className="rounded-2xl overflow-hidden aspect-[4/3] max-w-md mx-auto relative">
                 <img
                   src={melissaDunn}
                   alt="Melissa Dunn — Founder"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-[center_20%]"
                 />
                 <div className="absolute -bottom-3 -right-3 w-full h-full border-2 border-accent rounded-2xl -z-10" />
               </div>
@@ -310,8 +294,8 @@ const Index = () => {
       {/* ── CTA ── */}
       <section className="section-padding bg-primary relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={agencyCampaignPlanning} alt="" className="w-full h-full object-cover opacity-15" />
-          <div className="absolute inset-0 bg-primary/85" />
+          <img src={agencyMarketingFlatlay} alt="" className="w-full h-full object-cover opacity-30" />
+          <div className="absolute inset-0 bg-primary/70" />
         </div>
         <div className="container-narrow text-center relative z-10">
           <AnimatedSection>

@@ -4,7 +4,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import melissaDunn from "@/assets/melissa-dunn-cropped.jpg";
-import agencyStrategyRoom from "@/assets/agency-strategy-room.jpg";
+import agencyStrategyBright from "@/assets/agency-strategy-bright.jpg";
 
 const About = () => {
   return (
@@ -13,8 +13,8 @@ const About = () => {
 
       <section className="pt-32 pb-16 section-padding bg-primary relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={agencyStrategyRoom} alt="" className="w-full h-full object-cover opacity-15" />
-          <div className="absolute inset-0 bg-primary/85" />
+          <img src={agencyStrategyBright} alt="" className="w-full h-full object-cover opacity-25" />
+          <div className="absolute inset-0 bg-primary/75" />
         </div>
         <div className="container-narrow relative z-10">
           <AnimatedSection>
@@ -32,14 +32,13 @@ const About = () => {
             <AnimatedSection>
               <div className="sticky top-28">
                 <div className="relative max-w-md mx-auto">
-                  <div className="rounded-2xl overflow-hidden aspect-[3/4]">
+                  <div className="rounded-2xl overflow-hidden aspect-[4/3]">
                     <img
                       src={melissaDunn}
                       alt="Melissa Dunn — Founder of The Dunn Company"
-                      className="w-full h-full object-cover object-top"
+                      className="w-full h-full object-cover object-[center_20%]"
                     />
                   </div>
-                  {/* Decorative frame */}
                   <div className="absolute -bottom-3 -right-3 w-full h-full border-2 border-accent rounded-2xl -z-10" />
                 </div>
                 <p className="text-muted-foreground text-sm text-center mt-5 italic">Melissa Dunn — Founder</p>
@@ -52,7 +51,9 @@ const About = () => {
             </AnimatedSection>
             <AnimatedSection delay={0.15}>
               <div>
-                <h2 className="text-3xl font-heading font-bold text-foreground mb-6">Meet Melissa</h2>
+                <h2 className="text-4xl md:text-5xl font-heading font-black text-foreground mb-6 tracking-tight">
+                  Meet <span className="text-accent">Melissa</span>
+                </h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
                     Melissa Dunn is a marketing and design professional with a rare combination of creative, technical, and production experience. She founded The Dunn Company to help brands grow through thoughtful marketing strategy, strong visual design, and clear communication.
