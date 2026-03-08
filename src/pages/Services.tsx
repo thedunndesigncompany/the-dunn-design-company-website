@@ -1,9 +1,17 @@
 import { Link } from "react-router-dom";
-import { Palette, Presentation, Target, Share2, FileText, PenTool, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import {
+  BrandDesignIcon,
+  MarketingStrategyIcon,
+  DigitalContentIcon,
+  CollateralIcon,
+  CampaignIcon,
+  SocialDesignIcon,
+} from "@/components/icons/ServiceIcons";
 import heroBg from "@/assets/hero-bg.jpg";
 import serviceBrandDesign from "@/assets/service-brand-design.jpg";
 import serviceMarketingStrategy from "@/assets/service-marketing-strategy.jpg";
@@ -15,42 +23,42 @@ import agencyMarketingFlatlay from "@/assets/agency-marketing-flatlay.jpg";
 
 const services = [
   {
-    icon: Palette,
+    Icon: BrandDesignIcon,
     image: serviceBrandDesign,
     title: "Brand Design",
     desc: "Professional design systems including logos, brand visuals, business cards, and communication materials that strengthen brand identity.",
     deliverables: ["Logos & brand marks", "Visual identity systems", "Business cards", "Brand guidelines"],
   },
   {
-    icon: Target,
+    Icon: MarketingStrategyIcon,
     image: serviceMarketingStrategy,
     title: "Marketing Strategy",
     desc: "Strategic marketing planning that helps businesses define their message, identify their audience, and build approaches that support long-term growth.",
     deliverables: ["Marketing plans", "Campaign strategy", "Brand messaging", "Marketing consultation"],
   },
   {
-    icon: Share2,
+    Icon: DigitalContentIcon,
     image: serviceDigitalContent,
     title: "Digital Content",
     desc: "Creative social media graphics and digital content designed to increase engagement and strengthen brand presence across platforms.",
     deliverables: ["Social media graphics", "Campaign visuals", "Content templates", "Branded posts"],
   },
   {
-    icon: FileText,
+    Icon: CollateralIcon,
     image: serviceCollateral,
     title: "Marketing Collateral",
     desc: "Marketing materials such as brochures, presentations, digital assets, and promotional graphics that support brand communication.",
     deliverables: ["Pitch decks", "Sell sheets", "Brochures & flyers", "Email marketing graphics"],
   },
   {
-    icon: PenTool,
+    Icon: CampaignIcon,
     image: serviceCampaigns,
     title: "Creative Campaigns",
     desc: "End-to-end campaign design from concept to execution, supporting brand visibility and audience engagement across digital and print.",
     deliverables: ["Campaign concepts", "Ad creatives", "Launch materials", "Cross-channel assets"],
   },
   {
-    icon: Presentation,
+    Icon: SocialDesignIcon,
     image: serviceSocialDesign,
     title: "Social Media Design",
     desc: "Custom social media templates and branded content designs that keep your brand consistent and engaging across every platform.",
@@ -102,7 +110,7 @@ const Services = () => {
                 </div>
                 <div className={i % 2 === 1 ? "md:order-1" : ""}>
                   <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-4">
-                    <service.icon className="text-secondary" size={24} />
+                    <service.Icon className="text-secondary" size={24} />
                   </div>
                   <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-4">{service.title}</h2>
                   <p className="text-muted-foreground leading-relaxed mb-6">{service.desc}</p>
