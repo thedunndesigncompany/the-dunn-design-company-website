@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, Linkedin, MapPin, Instagram, Facebook, Youtube, MessageCircle } from "lucide-react";
+import logoImg from "@/assets/logo-dunn-company.png";
 
 const Footer = () => {
   return (
@@ -8,9 +9,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-12">
           <div>
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center flex-shrink-0">
-                <span className="text-accent-foreground font-heading font-bold text-sm">DC</span>
-              </div>
+              <img src={logoImg} alt="The Dunn Company logo" className="h-12 w-auto flex-shrink-0 brightness-0 invert" />
               <div>
                 <h3 className="text-lg font-heading font-bold">The Dunn Company</h3>
                 <p className="text-primary-foreground/50 text-xs font-heading">
@@ -48,7 +47,7 @@ const Footer = () => {
                 <Mail size={14} /> melissa@dunndesignz.com
               </a>
               <a href="mailto:thedunndesigncompany@gmail.com" className="flex items-center gap-2 text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">
-                <Mail size={14} /> thedunndesigncompany@gmail.com
+                <Mail size={14} /> thedunndesigncompany@gmail.com <span className="text-primary-foreground/40 text-xs">(backup)</span>
               </a>
               <a href="tel:410-440-7479" className="flex items-center gap-2 text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">
                 <Phone size={14} /> 410-440-7479
