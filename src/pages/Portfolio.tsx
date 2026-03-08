@@ -101,7 +101,7 @@ const Portfolio = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-primary-foreground max-w-4xl">
               Portfolio — Melissa Dunn
             </h1>
-            <p className="text-sky font-heading font-medium text-lg mt-2">
+            <p className="text-accent font-heading font-medium text-lg mt-2">
               Marketing Strategist | Graphic Designer | Social Media Specialist
             </p>
             <p className="text-primary-foreground/70 text-lg mt-4 max-w-2xl">
@@ -111,7 +111,7 @@ const Portfolio = () => {
         </div>
       </section>
 
-      <section className="py-8 px-6 bg-background border-b border-border sticky top-16 md:top-20 z-40 backdrop-blur-md bg-background/90">
+      <section className="py-8 px-6 bg-card border-b border-border sticky top-16 md:top-20 z-40 backdrop-blur-md">
         <div className="container-narrow flex gap-3 overflow-x-auto pb-2">
           {categories.map((cat) => (
             <button
@@ -119,8 +119,8 @@ const Portfolio = () => {
               onClick={() => { setActiveCategory(cat); setExpandedProject(null); }}
               className={`px-4 py-2 rounded-full text-sm font-heading font-medium whitespace-nowrap border transition-colors ${
                 activeCategory === cat
-                  ? "bg-accent text-accent-foreground border-accent"
-                  : "border-border text-muted-foreground hover:border-accent hover:text-accent"
+                  ? "bg-secondary text-secondary-foreground border-secondary"
+                  : "border-border text-muted-foreground hover:border-secondary hover:text-secondary"
               }`}
             >
               {cat}
@@ -144,7 +144,7 @@ const Portfolio = () => {
                 >
                   <motion.div
                     whileHover={{ y: -6 }}
-                    className="group bg-card rounded-xl overflow-hidden border border-border hover:shadow-xl transition-all duration-300 cursor-pointer"
+                    className="group bg-card rounded-2xl overflow-hidden border border-border hover:shadow-xl transition-all duration-300 cursor-pointer"
                     onClick={() => setExpandedProject(expandedProject === i ? null : i)}
                   >
                     <div className="aspect-[16/10] overflow-hidden">
@@ -155,7 +155,7 @@ const Portfolio = () => {
                       />
                     </div>
                     <div className="p-6">
-                      <span className="text-accent text-xs font-heading font-semibold uppercase tracking-wider">
+                      <span className="text-secondary text-xs font-heading font-semibold uppercase tracking-wider">
                         {project.category}
                       </span>
                       <h3 className="font-heading font-bold text-lg text-foreground mt-1 mb-1">{project.title}</h3>
@@ -195,7 +195,7 @@ const Portfolio = () => {
                         )}
                       </AnimatePresence>
 
-                      <span className="inline-flex items-center gap-1 text-accent text-sm font-heading font-semibold mt-3 group-hover:gap-2 transition-all">
+                      <span className="inline-flex items-center gap-1 text-secondary text-sm font-heading font-semibold mt-3 group-hover:gap-2 transition-all">
                         {expandedProject === i ? "Close" : "View Case Study"} <ArrowRight size={14} />
                       </span>
                     </div>
@@ -218,7 +218,7 @@ const Portfolio = () => {
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 bg-coral text-coral-foreground px-10 py-4 rounded-lg font-heading font-semibold text-sm hover:opacity-90 transition-opacity"
+              className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-10 py-4 rounded-lg font-heading font-semibold text-sm hover:brightness-110 transition-all"
             >
               Work With Me <ArrowRight size={16} />
             </Link>

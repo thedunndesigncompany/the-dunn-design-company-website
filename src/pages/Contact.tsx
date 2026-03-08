@@ -31,7 +31,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <section className="section-padding bg-background">
+      <section className="section-padding bg-card">
         <div className="container-narrow">
           <div className="grid md:grid-cols-5 gap-12">
             <div className="md:col-span-3">
@@ -45,7 +45,7 @@ const Contact = () => {
                       maxLength={100}
                       value={form.name}
                       onChange={(e) => setForm({ ...form, name: e.target.value })}
-                      className="w-full px-4 py-3 rounded-lg border border-border bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 transition-shadow"
+                      className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-secondary/50 transition-shadow"
                       placeholder="Your name"
                     />
                   </div>
@@ -57,7 +57,7 @@ const Contact = () => {
                       maxLength={255}
                       value={form.email}
                       onChange={(e) => setForm({ ...form, email: e.target.value })}
-                      className="w-full px-4 py-3 rounded-lg border border-border bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 transition-shadow"
+                      className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-secondary/50 transition-shadow"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -68,7 +68,7 @@ const Contact = () => {
                       maxLength={100}
                       value={form.company}
                       onChange={(e) => setForm({ ...form, company: e.target.value })}
-                      className="w-full px-4 py-3 rounded-lg border border-border bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 transition-shadow"
+                      className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-secondary/50 transition-shadow"
                       placeholder="Your company"
                     />
                   </div>
@@ -77,7 +77,7 @@ const Contact = () => {
                     <select
                       value={form.type}
                       onChange={(e) => setForm({ ...form, type: e.target.value })}
-                      className="w-full px-4 py-3 rounded-lg border border-border bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 transition-shadow"
+                      className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-secondary/50 transition-shadow"
                     >
                       <option value="">Select a project type</option>
                       <option value="strategy">Marketing Strategy</option>
@@ -95,7 +95,7 @@ const Contact = () => {
                       rows={5}
                       value={form.message}
                       onChange={(e) => setForm({ ...form, message: e.target.value })}
-                      className="w-full px-4 py-3 rounded-lg border border-border bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 transition-shadow resize-none"
+                      className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-secondary/50 transition-shadow resize-none"
                       placeholder="Tell me about your project..."
                     />
                   </div>
@@ -103,7 +103,7 @@ const Contact = () => {
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     type="submit"
-                    className="inline-flex items-center gap-2 bg-coral text-coral-foreground px-8 py-4 rounded-lg font-heading font-semibold text-sm hover:opacity-90 transition-opacity"
+                    className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-8 py-4 rounded-lg font-heading font-semibold text-sm hover:brightness-110 transition-all"
                   >
                     <Send size={16} /> Send Message
                   </motion.button>
@@ -116,13 +116,13 @@ const Contact = () => {
                   <div>
                     <h3 className="font-heading font-bold text-foreground mb-4">Contact Information</h3>
                     <div className="space-y-3">
-                      <a href="mailto:melissa@dunndesignz.com" className="flex items-center gap-3 text-muted-foreground hover:text-accent transition-colors text-sm">
+                      <a href="mailto:melissa@dunndesignz.com" className="flex items-center gap-3 text-muted-foreground hover:text-secondary transition-colors text-sm">
                         <Mail size={18} /> melissa@dunndesignz.com
                       </a>
-                      <a href="tel:410-440-7479" className="flex items-center gap-3 text-muted-foreground hover:text-accent transition-colors text-sm">
+                      <a href="tel:410-440-7479" className="flex items-center gap-3 text-muted-foreground hover:text-secondary transition-colors text-sm">
                         <Phone size={18} /> 410-440-7479
                       </a>
-                      <a href="https://www.linkedin.com/in/melissaldunn/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-accent transition-colors text-sm">
+                      <a href="https://www.linkedin.com/in/melissaldunn/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-secondary transition-colors text-sm">
                         <Linkedin size={18} /> LinkedIn Profile
                       </a>
                       <p className="flex items-center gap-3 text-muted-foreground text-sm">
@@ -143,7 +143,7 @@ const Contact = () => {
                     <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                       Want to discuss your project in more detail? Book a free consultation to explore how we can work together.
                     </p>
-                    <button className="inline-flex items-center gap-2 border border-accent text-accent px-6 py-3 rounded-lg font-heading font-semibold text-sm hover:bg-accent hover:text-accent-foreground transition-colors">
+                    <button className="inline-flex items-center gap-2 border border-secondary text-secondary px-6 py-3 rounded-lg font-heading font-semibold text-sm hover:bg-secondary hover:text-secondary-foreground transition-colors">
                       Book a Call
                     </button>
                   </div>

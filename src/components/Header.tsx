@@ -16,10 +16,10 @@ const Header = () => {
   const location = useLocation();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-b border-border">
       <div className="container-narrow flex items-center justify-between h-16 md:h-20 px-6">
         <Link to="/" className="flex flex-col">
-          <span className="font-heading font-bold text-lg md:text-xl text-primary tracking-tight leading-tight">
+          <span className="font-heading font-bold text-lg md:text-xl text-foreground tracking-tight leading-tight">
             The Dunn Company
           </span>
           <span className="text-[10px] md:text-xs text-muted-foreground font-heading font-medium tracking-wide leading-tight">
@@ -33,8 +33,8 @@ const Header = () => {
             <Link
               key={item.path}
               to={item.path}
-              className={`text-sm font-medium transition-colors hover:text-accent ${
-                location.pathname === item.path ? "text-accent" : "text-foreground/70"
+              className={`text-sm font-medium transition-colors hover:text-secondary ${
+                location.pathname === item.path ? "text-secondary" : "text-foreground/70"
               }`}
             >
               {item.label}
@@ -59,7 +59,7 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background border-b border-border overflow-hidden"
+            className="md:hidden bg-card border-b border-border overflow-hidden"
           >
             <div className="flex flex-col gap-1 px-6 py-4">
               {navItems.map((item) => (
@@ -68,7 +68,7 @@ const Header = () => {
                   to={item.path}
                   onClick={() => setMobileOpen(false)}
                   className={`py-3 text-sm font-medium transition-colors ${
-                    location.pathname === item.path ? "text-accent" : "text-foreground/70"
+                    location.pathname === item.path ? "text-secondary" : "text-foreground/70"
                   }`}
                 >
                   {item.label}

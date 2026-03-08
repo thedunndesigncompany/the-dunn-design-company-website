@@ -21,11 +21,11 @@ const About = () => {
         </div>
       </section>
 
-      <section className="section-padding bg-background">
+      <section className="section-padding bg-card">
         <div className="container-narrow">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <AnimatedSection>
-              <div className="rounded-xl overflow-hidden bg-muted aspect-[4/5]">
+              <div className="rounded-2xl overflow-hidden bg-muted aspect-[4/5]">
                 <img
                   src={aboutPortrait}
                   alt="Melissa Dunn — Founder of The Dunn Company"
@@ -42,7 +42,7 @@ const About = () => {
                     The Dunn Company is a modern marketing and creative firm focused on helping businesses grow through strategic marketing, creative design, and digital communication.
                   </p>
                   <p>
-                    Its creative studio division, The Dunn Design Company, specializes in brand design, marketing visuals, and digital content creation.
+                    Its creative studio division, <span className="text-secondary font-medium">The Dunn Design Company</span>, specializes in brand design, marketing visuals, and digital content creation.
                   </p>
                   <p>
                     The company was founded by Melissa Dunn, a marketing professional with experience in marketing strategy, graphic design, social media management, and digital content development.
@@ -56,7 +56,7 @@ const About = () => {
                 </div>
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 bg-coral text-coral-foreground px-8 py-4 rounded-lg font-heading font-semibold text-sm hover:opacity-90 transition-opacity mt-8"
+                  className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-8 py-4 rounded-lg font-heading font-semibold text-sm hover:brightness-110 transition-all mt-8"
                 >
                   Work With Me <ArrowRight size={16} />
                 </Link>
@@ -66,7 +66,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="section-padding bg-primary">
         <div className="container-narrow text-center">
           <AnimatedSection>
@@ -78,7 +77,7 @@ const About = () => {
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 bg-coral text-coral-foreground px-10 py-4 rounded-lg font-heading font-semibold text-sm hover:opacity-90 transition-opacity"
+              className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-10 py-4 rounded-lg font-heading font-semibold text-sm hover:brightness-110 transition-all"
             >
               Start Your Project <ArrowRight size={16} />
             </Link>
