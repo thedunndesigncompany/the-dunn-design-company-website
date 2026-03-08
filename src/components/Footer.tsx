@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Mail, Phone, Linkedin, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -14,7 +15,7 @@ const Footer = () => {
           <div>
             <h4 className="font-heading font-semibold mb-4 text-sm uppercase tracking-wider">Pages</h4>
             <nav className="flex flex-col gap-2">
-              {["Services", "Portfolio", "Writing", "About", "Contact"].map((page) => (
+              {["Services", "Portfolio", "About", "Contact"].map((page) => (
                 <Link
                   key={page}
                   to={`/${page.toLowerCase()}`}
@@ -27,8 +28,20 @@ const Footer = () => {
           </div>
           <div>
             <h4 className="font-heading font-semibold mb-4 text-sm uppercase tracking-wider">Connect</h4>
-            <p className="text-sm text-primary-foreground/60">hello@dunndesignco.com</p>
-            <p className="text-sm text-primary-foreground/60 mt-1">LinkedIn</p>
+            <div className="space-y-2">
+              <a href="mailto:melissa@dunndesignz.com" className="flex items-center gap-2 text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">
+                <Mail size={14} /> melissa@dunndesignz.com
+              </a>
+              <a href="tel:410-440-7479" className="flex items-center gap-2 text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">
+                <Phone size={14} /> 410-440-7479
+              </a>
+              <a href="https://www.linkedin.com/in/melissaldunn/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">
+                <Linkedin size={14} /> LinkedIn
+              </a>
+              <p className="flex items-center gap-2 text-sm text-primary-foreground/60">
+                <MapPin size={14} /> Columbia, Maryland
+              </p>
+            </div>
           </div>
         </div>
         <div className="mt-12 pt-8 border-t border-primary-foreground/10 text-center text-xs text-primary-foreground/40">
