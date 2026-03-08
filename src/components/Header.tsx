@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logoImg from "@/assets/logo-dunn-company.png";
 
 const navItems = [
   { label: "Home", path: "/" },
@@ -19,10 +20,7 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-b border-border">
       <div className="container-narrow flex items-center justify-between h-16 md:h-20 px-6">
         <Link to="/" className="flex items-center gap-3">
-          {/* Logo Placeholder — swap with real logo image later */}
-          <div className="w-10 h-10 rounded-lg bg-primary border border-accent/30 flex items-center justify-center flex-shrink-0">
-            <span className="text-accent font-heading font-bold text-xs tracking-tight">DC</span>
-          </div>
+          <img src={logoImg} alt="The Dunn Company logo" className="h-12 md:h-14 w-auto flex-shrink-0" />
           <div className="flex flex-col">
             <span className="font-heading font-bold text-base md:text-lg text-foreground tracking-tight leading-tight">
               The Dunn Company
