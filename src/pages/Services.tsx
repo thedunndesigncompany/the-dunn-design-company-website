@@ -14,7 +14,7 @@ import {
   SocialDesignIcon,
 } from "@/components/icons/ServiceIcons";
 import serviceAISystems from "@/assets/service-ai-systems.jpg";
-import heroBg from "@/assets/hero-bg.jpg";
+import servicesHero from "@/assets/services-hero.jpg";
 import serviceBrandDesign from "@/assets/service-brand-design.jpg";
 import serviceMarketingStrategy from "@/assets/service-marketing-strategy.jpg";
 import serviceDigitalContent from "@/assets/service-digital-content.jpg";
@@ -82,7 +82,7 @@ const Services = () => {
 
       <section className="pt-32 pb-16 section-padding bg-primary relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroBg} alt="" className="w-full h-full object-cover opacity-50" />
+          <img src={servicesHero} alt="" className="w-full h-full object-cover opacity-50" />
           <div className="absolute inset-0 bg-primary/50" />
         </div>
         <div className="container-narrow relative z-10">
