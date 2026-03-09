@@ -93,11 +93,11 @@ const Index = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="mb-6"
             >
-              <span className="text-primary-foreground/60 font-heading font-semibold text-sm uppercase tracking-[0.2em]">
+              <span className="text-primary-foreground font-heading font-semibold text-sm uppercase tracking-[0.2em] drop-shadow-lg">
                 The Dunn Company
               </span>
-              <span className="text-primary-foreground/30 mx-3">•</span>
-              <span className="text-primary-foreground/40 font-heading text-sm">
+              <span className="text-primary-foreground/60 mx-3 drop-shadow-lg">•</span>
+              <span className="bg-primary/70 backdrop-blur-sm text-primary-foreground font-heading font-semibold text-sm px-3 py-1 rounded-md shadow-lg">
                 Strategic Marketing & Brand Growth
               </span>
             </motion.div>
