@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import melissaDunn from "@/assets/melissa-dunn-cropped.jpg";
 import aboutBgPlants from "@/assets/about-bg-plants.jpg";
+import aboutElevateBrand from "@/assets/about-elevate-brand.jpg";
 
 const About = () => {
   return (
