@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import contactHero from "@/assets/contact-hero.jpg";
+import contactHero from "@/assets/contact-hero-zoomed.jpg";
 
 const projectTypes = [
   "Brand Identity / Logo Design",

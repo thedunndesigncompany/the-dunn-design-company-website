@@ -14,7 +14,7 @@ import {
   SocialDesignIcon,
 } from "@/components/icons/ServiceIcons";
 import serviceAISystems from "@/assets/service-ai-systems.jpg";
-import heroBg from "@/assets/hero-bg-new.jpg";
+import heroBg from "@/assets/hero-bg.jpg";
 import serviceBrandDesign from "@/assets/service-brand-design.jpg";
 import serviceMarketingStrategy from "@/assets/service-marketing-strategy.jpg";
 import serviceDigitalContent from "@/assets/service-digital-content.jpg";
