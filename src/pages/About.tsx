@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import melissaDunn from "@/assets/melissa-dunn-cropped.jpg";
 import aboutBgPlants from "@/assets/about-bg-plants.jpg";
+import aboutElevateBrand from "@/assets/about-elevate-brand.jpg";
 
 const About = () => {
   return (
@@ -121,8 +122,12 @@ const About = () => {
         </div>
       </section>
 
-      <section className="section-padding bg-primary">
-        <div className="container-narrow text-center">
+      <section className="section-padding bg-primary relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={aboutElevateBrand} alt="" className="w-full h-full object-cover opacity-30" />
+          <div className="absolute inset-0 bg-primary/70" />
+        </div>
+        <div className="container-narrow text-center relative z-10">
           <AnimatedSection>
             <h2 className="text-3xl md:text-5xl font-heading font-bold text-primary-foreground mb-4">
               Ready to Elevate Your Brand?
