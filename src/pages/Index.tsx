@@ -97,7 +97,7 @@ const Index = () => {
                 The Dunn Company
               </span>
               <span className="text-primary-foreground/30 mx-3">•</span>
-              <span className="text-primary-foreground/90 font-heading text-sm font-bold">
+              <span className="text-primary-foreground/40 font-heading text-sm">
                 Strategic Marketing & Brand Growth
               </span>
             </motion.div>
